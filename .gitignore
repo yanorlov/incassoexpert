@@ -220,3 +220,9 @@ pip-log.txt
 ## PHPStorm
 ###############
 .idea/
+
+
+###############
+## Gulp
+###############
+node_modules/
