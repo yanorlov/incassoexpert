@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box; }
+
+.container {
+  width: 960px;
+  margin: 0 auto; }
+  .container > .inside {
+    padding: 0 10px; }
