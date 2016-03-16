@@ -1,0 +1,23 @@
+.topBanner {
+  height: 464px;
+  background: url(../images/topBG.jpg) no-repeat center;
+  background-size: cover;
+  color: #fff; }
+  .topBanner h1 {
+    width: 610px;
+    font-size: 60px; }
+    .topBanner h1 .rate {
+      font-size: 90px;
+      font-weight: bold; }
+  .topBanner .factoids {
+    font-size: 18px; }
+    .topBanner .factoids li {
+      display: inline-block;
+      margin-right: 30px; }
+      .topBanner .factoids li:first-child {
+        width: 340px; }
+      .topBanner .factoids li:nth-child(2) {
+        width: 340px; }
+      .topBanner .factoids li:last-child {
+        width: 150px;
+        margin-right: 0; }

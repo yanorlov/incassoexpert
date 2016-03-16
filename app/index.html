@@ -7,6 +7,8 @@
 	<!--build:css css/styles.css-->
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/top-banner.css">
+	<link rel="stylesheet" href="css/calc.css">
 	<!--endbuild-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<!--build:js js/plugins.js -->
@@ -48,15 +50,15 @@
 					</nav>
 					<div class="callback">
 						<a class="phone" href="tel:88005006000">8 800 500-60-00</a>
-						<button class="btn-bordo btn-s">Заказать обратный звонок</button>
+						<button class="btnBordo btnS">Заказать обратный звонок</button>
 					</div>
 				</div>
 			</div>
 		</header>
-		<section class="top-banner">
+		<section class="topBanner">
 			<div class="container">
 				<div class="inside">
-					<h1>Сбережения в Москве до&nbsp;36%</h1>
+					<h1>Сбережения в Москве до&nbsp;<span class="rate">36%</span></h1>
 					<ul class="factoids">
 						<li>Ежемесячное перечисление процентов на любой счёт или капитализация</li>
 						<li>Сбережения и проценты застрахованы на всю сумму в СК ОПОРА</li>
@@ -66,7 +68,67 @@
 			</div>
 		</section>
 		<section class="calc">
+			<div class="calcOuter">
+				<div class="container">
+					<div class="calcInner">
 
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="inside">
+					<table class="calcResult">
+						<colgroup>
+							<col class="col-1">
+							<col class="col-2">
+						</colgroup>
+						<tbody>
+							<tr>
+								<td>Вы получите:</td>
+								<td>
+									<span class="calc_out_sum">
+										<span class="calc_out_sum_val">
+											2 870 000
+										</span>
+										₽
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>По программе:</td>
+								<td>
+									<span class="calc_out_prog">
+										<span class="calc_out_prog_val">
+											Долгий доходный продукт
+										</span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Доход по вкладу:</td>
+								<td>
+									<span class="calc_out_income">
+										<span class="calc_out_income_val">
+											651 151
+										</span>
+										₽
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>Процентная ставка:</td>
+								<td>
+									<span class="calc_out_rate">
+										<span class="calc_out_rate_val">
+											16%
+										</span>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</section>
 		<section class="answer">
 
