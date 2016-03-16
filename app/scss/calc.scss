@@ -1,0 +1,33 @@
+.calc {
+	position: relative;
+	padding-top: 95px;
+}
+
+.calcOuter {
+	position: absolute;
+	top: -111px;
+	left: 0;
+	right: 0;
+}
+
+.calcInner {
+	background: #fff;
+	height: 190px;
+	border-radius: 5px;
+	box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+.calcResult {
+
+	.col-1 {
+
+	}
+
+	.col-2 {
+
+	}
+
+	tr > td:first-child {
+		font-size: 15px;
+	}
+}
