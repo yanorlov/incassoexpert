@@ -5,10 +5,6 @@ var useref = require('gulp-useref');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 
-gulp.task('hello', function() {
-    console.log('Hello Zell');
-});
-
 gulp.task('sass', function(){
     return gulp.src('app/scss/**/*.scss')
         .pipe(sass())
