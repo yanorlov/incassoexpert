@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box; }
 
+body {
+  font-family: "Myriad Pro"; }
+
 .container {
   width: 960px;
   margin: 0 auto; }

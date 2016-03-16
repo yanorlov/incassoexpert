@@ -36,6 +36,11 @@ gulp.task('images', function(){
         .pipe(gulp.dest('dist/images'))
 });
 
+gulp.task('fonts', function(){
+    return gulp.src('app/fonts/**/*.+(ttf|eot|woff|svg)')
+        .pipe(gulp.dest('dist/fonts'))
+});
+
 gulp.task('useref', function(){
     return gulp.src('app/*.html')
         .pipe(useref())
