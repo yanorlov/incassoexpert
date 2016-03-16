@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var useref = require('gulp-useref');
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
 
 gulp.task('hello', function() {
     console.log('Hello Zell');
@@ -27,6 +29,15 @@ gulp.task('browserSync', function() {
             baseDir: 'app'
         }
     })
+});
+
+gulp.task('images', function(){
+    return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
+        .pipe(cache(imagemin({
+            // Setting interlaced to true
+            interlaced: true
+        })))
+        .pipe(gulp.dest('dist/images'))
 });
 
 gulp.task('useref', function(){
