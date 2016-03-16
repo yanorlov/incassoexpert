@@ -5,7 +5,8 @@
   color: #fff; }
   .topBanner h1 {
     width: 610px;
-    font-size: 60px; }
+    font-weight: normal;
+    color: inherit; }
     .topBanner h1 .rate {
       font-size: 90px;
       font-weight: bold; }

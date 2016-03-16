@@ -4,16 +4,22 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<link rel="stylesheet" href="css/reset.css">
+	<!--build:css css/plugins.css-->
+	<link rel="stylesheet" href="css/plugins/jquery.formstyler.css">
+	<link rel="stylesheet" href="css/plugins/jquery-ui-1.10.3.custom.css">
+	<!--endbuild-->
 	<!--build:css css/styles.css-->
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/top-banner.css">
 	<link rel="stylesheet" href="css/calc.css">
+	<link rel="stylesheet" href="css/answer.css">
 	<!--endbuild-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<!--build:js js/plugins.js -->
-	<!--<script src="js/plugins/plugin1.js"></script>-->
+	<script src="js/plugins/jquery.formstyler.js"></script>
+	<script src="js/plugins/jquery-ui-1.10.3.custom.min.js"></script>
 	<!-- endbuild -->
 	<!--build:js js/main.js -->
 	<script src="js/main.js"></script>
@@ -72,7 +78,47 @@
 			<div class="calcOuter">
 				<div class="container">
 					<div class="calcInner">
-
+						<table class="calcInputs">
+							<tbody>
+								<tr>
+									<th>
+										Хочу вложить
+									</th>
+									<th>
+										На срок
+									</th>
+									<th>
+										Ежемесячное пополнение вклада
+									</th>
+									<th>
+										Начисление процентов
+									</th>
+								</tr>
+								<tr>
+									<td>
+										<input type="text" name="calc_sum" class="calc_sum inputType1" value="3 000 000">
+										<div class="w-calc_sum_slider">
+											<div class="slider calc_sum_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+												<a class="ui-slider-handle ui-state-default ui-corner-all">
+												</a>
+											</div>
+										</div>
+									</td>
+									<td>
+										<input type="select">
+									</td>
+									<td>
+										<input type="text" name="calc_refill" class="calc_refill inputType1" value="150 000">
+										<div class="w-calc_sum_slider">
+											<div class="slider calc_sum_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+												<a class="ui-slider-handle ui-state-default ui-corner-all">
+												</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
@@ -132,10 +178,51 @@
 			</div>
 		</section>
 		<section class="answer">
-			<h2>Ответим на вопросы, поможем подобрать программу</h2>
+			<div class="container">
+				<div class="inside clearfix">
+					<h3>Ответим на вопросы, поможем подобрать программу</h3>
+					<div class="contactsCol">
+						<a href="tel:88005006000" class="phone">8 800 500-60-00</a>
+						<span class="schedule">Будни с 9:30 до 21:00, выходные с 10:00 до 19:00</span>
+						<span class="schemeAnchor">
+							<a href="#" class="pseudo">Схема проезда</a>
+						</span>
+					</div>
+					<div class="separator">
+						или
+					</div>
+					<div class="formCol">
+						<form action="" class="answersCallback">
+							<input type="text" class="inputType2" name="phone" placeholder="оставьте свой номер">
+							<button type="submit" class="btnBordo btnM">Перезвоните мне</button>
+						</form>
+						<p>Перезвоним в течение 15 минут</p>
+					</div>
+				</div>
+			</div>
 		</section>
 		<section class="depositsComparison">
-			<h2>Сравнение условий</h2>
+			<div class="container">
+				<div class="inside">
+					<h2>Сравнение условий</h2>
+				</div>
+				<div class="comparisonTable">
+					<div class="headings">
+						<span class="top">Программа</span>
+						<span>Вы получите</span>
+						<span>Доход по программе</span>
+						<span>Процентная ставка</span>
+						<span>Срок</span>
+						<span>Минимальная сумма</span>
+						<span>Пополнение</span>
+						<span>Начисление процентов</span>
+						<span>Досрочное снятие</span>
+					</div>
+					<div class="depositBlock">
+
+					</div>
+				</div>
+			</div>
 		</section>
 		<section class="insurance">
 

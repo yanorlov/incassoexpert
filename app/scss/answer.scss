@@ -1,0 +1,57 @@
+.answer {
+	padding: 48px 54px;
+	background: #f2f2f2;
+
+	.contactsCol {
+		float: left;
+
+		.phone {
+			font-size: 32px;
+			font-weight: bold;
+			color: #3b3d47;
+		}
+
+		.schedule {
+			display: block;
+			font-size: 14px;
+		}
+
+		.schemeAnchor {
+			display: inline-block;
+			font-size: 15px;
+			line-height: 25px;
+			padding-left: 27px;
+			height: 25px;
+			background: url(../images/mapAnchor.png) no-repeat left center;
+		}
+	}
+
+	.separator {
+		display: block;
+		float: left;
+		font-size: 18px;
+		padding: 0 54px 0 30px;
+		font-weight: 100;
+	}
+
+	.formCol {
+		float: left;
+
+		.answersCallback {
+			input[type="text"]{
+				display: inline-block;
+				width: 240px;
+				margin-right: 19px;
+			}
+		}
+
+		p {
+			margin-left: 271px;
+			margin-top: 8px;
+			font-size: 14px;
+			color: #989898;
+		}
+	}
+
+
+}
