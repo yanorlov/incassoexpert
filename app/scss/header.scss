@@ -1,4 +1,30 @@
 header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
 	height: 72px;
 	background: #fff;
+	box-shadow: 0 0 7px 0 rgba(0,0,0,.4);
+
+	.logo {
+		display: inline-block;
+	}
+
+	.mainMenu {
+		display: inline-block;
+
+		& > ul > li {
+			display: inline-block;
+		}
+	}
+
+	.callback {
+		float: right;
+
+		.phone {
+			font-size: 21px;
+			font-weight: bold;
+		}
+	}
 }

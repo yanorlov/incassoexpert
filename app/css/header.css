@@ -1,3 +1,19 @@
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 72px;
-  background: #fff; }
+  background: #fff;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4); }
+  header .logo {
+    display: inline-block; }
+  header .mainMenu {
+    display: inline-block; }
+    header .mainMenu > ul > li {
+      display: inline-block; }
+  header .callback {
+    float: right; }
+    header .callback .phone {
+      font-size: 21px;
+      font-weight: bold; }

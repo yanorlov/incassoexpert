@@ -1,8 +1,41 @@
 * {
   box-sizing: border-box; }
 
+body {
+  background: #f2f2f2; }
+
 .container {
+  background: #fff;
   width: 960px;
   margin: 0 auto; }
   .container > .inside {
     padding: 0 10px; }
+
+a, a:focus, a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer; }
+
+.btn-bordo {
+  background: #a23b4a;
+  color: #fff;
+  white-space: nowrap; }
+
+.btn-s {
+  height: 21px;
+  padding: 0 15px;
+  border-radius: 9px;
+  font-size: 12px; }
+
+.pseudo {
+  color: #1275a5;
+  border-bottom: 1px dashed #1275a5;
+  padding-bottom: 2px; }
+
+.wrapper {
+  position: relative;
+  padding-top: 72px; }
