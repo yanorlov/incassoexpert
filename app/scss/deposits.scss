@@ -1,0 +1,100 @@
+.depositsComparison {
+
+	padding: 57px 0 77px;
+
+	h2 {
+		margin-bottom: 45px;
+	}
+
+	.comparisonTable {
+		.headings {
+			width: 200px;
+			float: left;
+
+			span {
+				display: block;
+				height: 37px;
+				padding-left: 10px;
+				font-size: 14px;
+				line-height: 37px;
+
+				&:first-child {
+					height: 72px;
+					padding-top: 20px;
+					line-height: 16px;
+					border-bottom: 1px solid #7f7f7f;
+					font-size: 16px;
+				}
+
+				&:nth-child(2) {
+					height: 50px;
+					padding-top: 13px;
+				}
+			}
+		}
+
+		.depositBlock {
+			float: left;
+			position: relative;
+			width: 160px;
+			margin-right: 39px;
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				right: -39px;
+				width: 39px;
+				height: 71px;
+				border-bottom: 1px solid #7f7f7f;
+			}
+
+			span {
+				display: block;
+				height: 37px;
+				padding-left: 18px;
+				font-size: 16px;
+				font-weight: 100;
+				line-height: 37px;
+
+				&:first-child {
+					height: 72px;
+					padding-top: 20px;
+					line-height: 16px;
+					border-bottom: 1px solid #7f7f7f;
+				}
+
+				&:nth-child(2) {
+					height: 50px;
+					padding-top: 13px;
+				}
+			}
+
+			&.active {
+				border-left: 2px solid #a23b4a;
+				border-right: 2px solid #a23b4a;
+				border-bottom: 2px solid #a23b4a;
+
+				span:first-child {
+					background: #a23b4a;
+					border-bottom-color: #a23b4a;
+					color: #fff;
+				}
+
+				&:after {
+					right: -41px;
+					width: 39px;
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}

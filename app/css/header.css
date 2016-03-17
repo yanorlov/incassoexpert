@@ -7,13 +7,25 @@ header {
   background: #fff;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4); }
   header .logo {
-    display: inline-block; }
+    display: inline-block;
+    padding-top: 23px;
+    margin-right: 15px; }
   header .mainMenu {
-    display: inline-block; }
+    display: inline-block;
+    padding-top: 28px;
+    vertical-align: top; }
     header .mainMenu > ul > li {
-      display: inline-block; }
+      display: inline-block;
+      margin: 0 10px; }
+      header .mainMenu > ul > li a {
+        font-size: 14px; }
   header .callback {
-    float: right; }
+    float: right;
+    text-align: center;
+    padding-top: 15px; }
     header .callback .phone {
       font-size: 21px;
       font-weight: bold; }
+    header .callback button {
+      display: block;
+      margin-top: 3px; }

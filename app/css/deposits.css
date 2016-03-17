@@ -1,0 +1,66 @@
+.depositsComparison {
+  padding: 57px 0 77px; }
+  .depositsComparison h2 {
+    margin-bottom: 45px; }
+  .depositsComparison .comparisonTable .headings {
+    width: 200px;
+    float: left; }
+    .depositsComparison .comparisonTable .headings span {
+      display: block;
+      height: 37px;
+      padding-left: 10px;
+      font-size: 14px;
+      line-height: 37px; }
+      .depositsComparison .comparisonTable .headings span:first-child {
+        height: 72px;
+        padding-top: 20px;
+        line-height: 16px;
+        border-bottom: 1px solid #7f7f7f;
+        font-size: 16px; }
+      .depositsComparison .comparisonTable .headings span:nth-child(2) {
+        height: 50px;
+        padding-top: 13px; }
+  .depositsComparison .comparisonTable .depositBlock {
+    float: left;
+    position: relative;
+    width: 160px;
+    margin-right: 39px; }
+    .depositsComparison .comparisonTable .depositBlock:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -39px;
+      width: 39px;
+      height: 71px;
+      border-bottom: 1px solid #7f7f7f; }
+    .depositsComparison .comparisonTable .depositBlock span {
+      display: block;
+      height: 37px;
+      padding-left: 18px;
+      font-size: 16px;
+      font-weight: 100;
+      line-height: 37px; }
+      .depositsComparison .comparisonTable .depositBlock span:first-child {
+        height: 72px;
+        padding-top: 20px;
+        line-height: 16px;
+        border-bottom: 1px solid #7f7f7f; }
+      .depositsComparison .comparisonTable .depositBlock span:nth-child(2) {
+        height: 50px;
+        padding-top: 13px; }
+    .depositsComparison .comparisonTable .depositBlock.active {
+      border-left: 2px solid #a23b4a;
+      border-right: 2px solid #a23b4a;
+      border-bottom: 2px solid #a23b4a; }
+      .depositsComparison .comparisonTable .depositBlock.active span:first-child {
+        background: #a23b4a;
+        border-bottom-color: #a23b4a;
+        color: #fff; }
+      .depositsComparison .comparisonTable .depositBlock.active:after {
+        right: -41px;
+        width: 39px; }
+    .depositsComparison .comparisonTable .depositBlock:last-child {
+      margin-right: 0; }
+      .depositsComparison .comparisonTable .depositBlock:last-child:after {
+        display: none; }

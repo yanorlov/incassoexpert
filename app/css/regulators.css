@@ -1,0 +1,18 @@
+.regulator {
+  margin: 17px 0;
+  padding: 20px 45px 16px 140px; }
+  .regulator.cb {
+    background: url(../images/cb.png) no-repeat;
+    background-position: top 17px left 20px; }
+  .regulator.rfm {
+    background: url(../images/rfm.png) no-repeat;
+    background-position: top 17px left 18px; }
+  .regulator.mir {
+    background: url(../images/mir.png) no-repeat;
+    background-position: top 17px left 10px; }
+  .regulator h5 {
+    margin-bottom: 6px; }
+  .regulator p {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 16px; }

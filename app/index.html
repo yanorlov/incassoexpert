@@ -15,6 +15,9 @@
 	<link rel="stylesheet" href="css/top-banner.css">
 	<link rel="stylesheet" href="css/calc.css">
 	<link rel="stylesheet" href="css/answer.css">
+	<link rel="stylesheet" href="css/deposits.css">
+	<link rel="stylesheet" href="css/insurance.css">
+	<link rel="stylesheet" href="css/regulators.css">
 	<!--endbuild-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<!--build:js js/plugins.js -->
@@ -79,6 +82,12 @@
 				<div class="container">
 					<div class="calcInner">
 						<table class="calcInputs">
+							<colgroup>
+								<col class="col-1">
+								<col class="col-2">
+								<col class="col-3">
+								<col class="col-4">
+							</colgroup>
 							<tbody>
 								<tr>
 									<th>
@@ -105,16 +114,26 @@
 										</div>
 									</td>
 									<td>
-										<input type="select">
+										<div class="jq-selectbox jqselect calc_period">
+											<select name="calc_period" class="calc_period">
+												<option>3 мес.</option>
+												<option>6 мес.</option>
+												<option>12 мес.</option>
+												<option data-value="24">24 мес.</option>
+												<option selected="">36 мес.</option>
+											</select>
+										</div>
 									</td>
 									<td>
 										<input type="text" name="calc_refill" class="calc_refill inputType1" value="150 000">
-										<div class="w-calc_sum_slider">
-											<div class="slider calc_sum_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+										<div class="w-calc_refill_slider">
+											<div class="slider calc_refill_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
 												<a class="ui-slider-handle ui-state-default ui-corner-all">
 												</a>
 											</div>
 										</div>
+									</td>
+									<td>
 									</td>
 								</tr>
 							</tbody>
@@ -123,57 +142,74 @@
 				</div>
 			</div>
 			<div class="container">
-				<div class="inside">
-					<table class="calcResult">
-						<colgroup>
-							<col class="col-1">
-							<col class="col-2">
-						</colgroup>
-						<tbody>
-							<tr>
-								<td>Вы получите:</td>
-								<td>
-									<span class="calc_out_sum">
-										<span class="calc_out_sum_val">
-											2 870 000
+				<div class="inside clearfix">
+					<div class="resTableCol">
+						<table class="calcResult">
+							<colgroup>
+								<col class="col-1">
+								<col class="col-2">
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>Вы получите:</td>
+									<td>
+										<span class="calc_out_sum">
+											<span class="calc_out_sum_val">
+												2 870 000
+											</span>
+											₽
 										</span>
-										₽
-									</span>
-								</td>
-							</tr>
-							<tr>
-								<td>По программе:</td>
-								<td>
-									<span class="calc_out_prog">
-										<span class="calc_out_prog_val">
-											Долгий доходный продукт
+									</td>
+								</tr>
+								<tr>
+									<td>По программе:</td>
+									<td>
+										<span class="calc_out_prog">
+											<span class="calc_out_prog_val">
+												Долгий доходный продукт
+											</span>
 										</span>
-									</span>
-								</td>
-							</tr>
-							<tr>
-								<td>Доход по вкладу:</td>
-								<td>
-									<span class="calc_out_income">
-										<span class="calc_out_income_val">
-											651 151
+									</td>
+								</tr>
+								<tr>
+									<td>Доход по вкладу:</td>
+									<td>
+										<span class="calc_out_income">
+											<span class="calc_out_income_val">
+												651 151
+											</span>
+											₽
 										</span>
-										₽
-									</span>
-								</td>
-							</tr>
-							<tr>
-								<td>Процентная ставка:</td>
-								<td>
-									<span class="calc_out_rate">
-										<span class="calc_out_rate_val">
-											16%
+									</td>
+								</tr>
+								<tr>
+									<td>Процентная ставка:</td>
+									<td>
+										<span class="calc_out_rate">
+											<span class="calc_out_rate_val">
+												16%
+											</span>
 										</span>
-									</span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<span class="calcInsurance">
+						вклады застрахованы в&nbsp;СК&nbsp;ОПОРА
+					</span>
+					<div class="calcLinks">
+						<span>
+							<a href="#" class="pseudo">График начислений</a>
+						</span>
+						<span>
+							<a href="#" class="pseudo">Сохранить результаты</a>
+						</span>
+					</div>
+					<div class="calcGift">
+						<p class="bold">Подарок</p>
+						<p>Индивидуальный страховой сертификат</p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -206,7 +242,7 @@
 				<div class="inside">
 					<h2>Сравнение условий</h2>
 				</div>
-				<div class="comparisonTable">
+				<div class="comparisonTable clearfix">
 					<div class="headings">
 						<span class="top">Программа</span>
 						<span>Вы получите</span>
@@ -218,17 +254,152 @@
 						<span>Начисление процентов</span>
 						<span>Досрочное снятие</span>
 					</div>
+					<div class="depositBlock active">
+						<span class="top">Долгий доходный продукт</span>
+						<span>202 000</span>
+						<span>51 131</span>
+						<span>28%</span>
+						<span>от 1 года</span>
+						<span>50 000</span>
+						<span>от 50 000</span>
+						<span>В конце срока</span>
+						<span>от 50 000</span>
+						<span><a href="#" class="pseudo">Полные условия</a></span>
+					</div>
 					<div class="depositBlock">
-
+						<span class="top">Гибкий продукт</span>
+						<span>202 000</span>
+						<span>51 131</span>
+						<span>28%</span>
+						<span>от 1 года</span>
+						<span>50 000</span>
+						<span>от 50 000</span>
+						<span>В конце срока</span>
+						<span>от 50 000</span>
+						<span><a href="#" class="pseudo">Полные условия</a></span>
+					</div>
+					<div class="depositBlock">
+						<span class="top">Пассивный доход</span>
+						<span>202 000</span>
+						<span>51 131</span>
+						<span>28%</span>
+						<span>от 1 года</span>
+						<span>50 000</span>
+						<span>от 50 000</span>
+						<span>В конце срока</span>
+						<span>от 50 000</span>
+						<span><a href="#" class="pseudo">Полные условия</a></span>
+					</div>
+					<div class="depositBlock">
+						<span class="top">Моя цель</span>
+						<span>202 000</span>
+						<span>51 131</span>
+						<span>28%</span>
+						<span>от 1 года</span>
+						<span>50 000</span>
+						<span>от 50 000</span>
+						<span>В конце срока</span>
+						<span>от 50 000</span>
+						<span><a href="#" class="pseudo">Полные условия</a></span>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="insurance">
+		<section class="insurance clearfix">
+			<div class="container">
+				<div class="inside">
+					<h2>Сбережения и проценты застрахованы на&nbsp;всю&nbsp;сумму</h2>
+					<div class="opora-col">
+						<div class="insBlock">
+							<h5>Сбережения и&nbsp;проценты застрахованы в&nbsp;СК&nbsp;«Опора»</h5>
+							<p>
+								Все сбережения и проценты защищены страховой компанией АО «Страховая Компания Опора»
+								договором комплексного страхования фмнансовых рисков на 100 000 000 рублей.
+							</p>
+							<div class="oporaFacts">
+								<h6>Факты о страховой компании «Опора»</h6>
+								<ul>
+									<li>На страховом рынке с 1996 года;</li>
+									<li>Входит в ТОП-15 страховщиков РФ по страхованию от несчастных случаев и болезней;</li>
+									<li>Входит в ТОП-25 по личному страхованию;</li>
+									<li>Входит в ТОП-32 страховщиков РФ по совокупным сборам по данным ЦБ РФ, за 2014 год;</li>
+									<li>Надёжная система перестрахования рисков в крупнейших компаниях, таких как
+										HANNOVER Re (Германия), SCOR (Франция) и др.;</li>
+									<li>Лауреат Всероссийской премии в области страхования «Золотая Саламандра 2011» в номинации
+										«Знак качества страховых услуг»;</li>
+									<li>Лицензия ЦБ РФ № 3099 от 08.12.2015.</li>
+								</ul>
+								<div class="oporaDocs">
+									<a href="#" class="docLink"><span>Договор страхования (ПДФ, ?.? МБ)</span></a>
+									<a class="pseudo" href="#">Правила страхования</a>
+								</div>
+							</div>
+						</div>
 
+						<div class="reserveBlock">
+							<h5>Формируем резервы по займам</h5>
+							<p>
+								В соответствии со ст. 297.3 и ст. 266 Налогового Кодекса Российской Федерации и Указанием Банка
+								России от 14.07.2014 № 3321-У, мы формируем резервы по займам.
+							</p>
+						</div>
+
+						<div class="mirBlock">
+							<h5>Мы являемся участником СРО «МиР»</h5>
+							<p>
+								По правилам СРО мы несем дополнительную ответственность перед инвесторами,
+								поэтому регулярно проводим отчисления в компенсационный фонд.
+							</p>
+						</div>
+					</div>
+					<div class="docs-col">
+						<div class="docItem"></div>
+					</div>
+				</div>
+			</div>
 		</section>
 		<section class="regulators">
-
+			<div class="container">
+				<div class="inside">
+					<h2>Работу компании регулируют</h2>
+					<div class="regulator cb">
+						<h5>Центральный Банк РФ</h5>
+						<p>
+							Ведет государственный реестр микрофинансовых организаций, осуществляет
+							надзор за выполнением требований, установленных Федеральным законом
+							от 02.07.2010 N 151-ФЗ «О микрофинансовой деятельности и микрофинансовых
+							организациях», дает микрофинансовой организации обязательные для исполнения
+							предписания об устранении выявленных нарушений, устанавливает числовые значения
+							и порядок расчета и осуществляет контроль за соблюдением экономических нормативов
+							достаточности собственных средств и ликвидности микрофинансовыми организациями.
+						</p>
+						<a href="#" class="docLink"><span>Федеральный закон от 02.07.2010 N 151-ФЗ (ПДФ, ?.? МБ)</span></a>
+					</div>
+					<div class="regulator rfm">
+						<h5>Росфинмониторинг</h5>
+						<p>
+							Контролирует выполнение юридическими и физическими лицами законодательства Российской
+							Федерации о противодействии легализации (отмыванию) доходов, полученных преступным путем,
+							и финансированию терроризма, а также привлечение к ответственности юридических и физических
+							лиц, допустивших нарушение законодательства Российской Федерации в этой сфере.
+						</p>
+						<a href="#" class="docLink"><span>Федеральный закон от 07.08.2001 N 115-ФЗ (ПДФ, ?.? МБ)</span></a>
+					</div>
+					<div class="regulator mir">
+						<h5>Саморегулируемая организация «МиР»</h5>
+						<p>
+							Главный канал взаимодействия регулирующих органов с микрофинансовым рынком и
+							осуществляет контроль за соблюдением членами СРО требований федеральных законов,
+							регулирующих деятельность в сфере финансового рынка, нормативных правовых актов
+							Российской Федерации, нормативных актов Банка России, базовых стандартов, внутренних
+							стандартов и иных внутренних документов СРО путем проведения плановых и внеплановых
+							проверок на основании Федерального закона от 13.07.2015 № 223-ФЗ «О саморегулируемых
+							организациях в сфере финансового рынка».
+						</p>
+						<a href="#" class="docLink"><span>Правила и стандарты СРО МИР (ПДФ, ?.? МБ)</span></a>
+					</div>
+				</div>
+			</div>
 		</section>
 		<section class="investmentsComparison">
 

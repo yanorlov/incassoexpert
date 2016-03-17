@@ -1,0 +1,76 @@
+.insurance {
+
+	background: #f2f2f2;
+	padding: 56px 0 106px;
+
+	h2 {
+		margin-bottom: 45px;
+	}
+
+	h5 {
+		margin-bottom: 6px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 23px;
+		margin-bottom: 16px;
+	}
+
+	.opora-col {
+		float: left;
+		width: 780px;
+	}
+
+	.docs-col {
+		float: left;
+		width: 160px;
+	}
+
+	.insBlock {
+
+		margin-bottom: 45px;
+
+		.oporaFacts {
+			padding-top: 63px;
+			background: url(../images/opora.png) no-repeat left top;
+
+			h6 {
+				margin-bottom: 15px;
+			}
+
+			ul {
+				margin-bottom: 25px;
+
+				li {
+					display: block;
+					min-height: 17px;
+					background: url(../images/v.png) no-repeat left 12px top;
+					padding-left: 40px;
+					margin-bottom: 9px;
+					line-height: 23px;
+					font-size: 15px;
+				}
+			}
+
+			.oporaDocs {
+				.docLink {
+					margin-right: 40px;
+				}
+				.pseudo {
+					font-size: 14px;
+					font-weight: 100;
+				}
+			}
+		}
+	}
+
+	.reserveBlock {
+		margin-bottom: 45px;
+	}
+
+	.mirBlock {
+		padding-bottom: 33px;
+		background: url(../images/mir.png) no-repeat left bottom;
+	}
+}

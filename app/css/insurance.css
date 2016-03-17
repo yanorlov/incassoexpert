@@ -1,0 +1,44 @@
+.insurance {
+  background: #f2f2f2;
+  padding: 56px 0 106px; }
+  .insurance h2 {
+    margin-bottom: 45px; }
+  .insurance h5 {
+    margin-bottom: 6px; }
+  .insurance p {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 16px; }
+  .insurance .opora-col {
+    float: left;
+    width: 780px; }
+  .insurance .docs-col {
+    float: left;
+    width: 160px; }
+  .insurance .insBlock {
+    margin-bottom: 45px; }
+    .insurance .insBlock .oporaFacts {
+      padding-top: 63px;
+      background: url(../images/opora.png) no-repeat left top; }
+      .insurance .insBlock .oporaFacts h6 {
+        margin-bottom: 15px; }
+      .insurance .insBlock .oporaFacts ul {
+        margin-bottom: 25px; }
+        .insurance .insBlock .oporaFacts ul li {
+          display: block;
+          min-height: 17px;
+          background: url(../images/v.png) no-repeat left 12px top;
+          padding-left: 40px;
+          margin-bottom: 9px;
+          line-height: 23px;
+          font-size: 15px; }
+      .insurance .insBlock .oporaFacts .oporaDocs .docLink {
+        margin-right: 40px; }
+      .insurance .insBlock .oporaFacts .oporaDocs .pseudo {
+        font-size: 14px;
+        font-weight: 100; }
+  .insurance .reserveBlock {
+    margin-bottom: 45px; }
+  .insurance .mirBlock {
+    padding-bottom: 33px;
+    background: url(../images/mir.png) no-repeat left bottom; }

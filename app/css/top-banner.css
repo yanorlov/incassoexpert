@@ -1,20 +1,24 @@
 .topBanner {
   height: 464px;
+  padding: 47px 0 0;
   background: url(../images/topBG.jpg) no-repeat center;
   background-size: cover;
   color: #fff; }
   .topBanner h1 {
     width: 610px;
     font-weight: normal;
-    color: inherit; }
+    color: inherit;
+    line-height: 89px; }
     .topBanner h1 .rate {
       font-size: 90px;
       font-weight: bold; }
   .topBanner .factoids {
+    margin-top: 24px;
     font-size: 18px; }
     .topBanner .factoids li {
       display: inline-block;
-      margin-right: 30px; }
+      margin-right: 30px;
+      line-height: 24px; }
       .topBanner .factoids li:first-child {
         width: 340px; }
       .topBanner .factoids li:nth-child(2) {

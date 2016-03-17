@@ -53,13 +53,30 @@ button {
   border-bottom: 1px dashed #1275a5;
   padding-bottom: 2px; }
 
+.docLink {
+  display: inline-block;
+  min-height: 23px;
+  padding-left: 28px;
+  line-height: 23px;
+  background: url(../images/file.png) no-repeat left center; }
+  .docLink span {
+    color: #007bbf;
+    font-size: 14px;
+    font-weight: 100;
+    border-bottom: 1px solid #d0e3ed; }
+
 .wrapper {
+  width: 100%;
+  min-width: 1000px;
   position: relative;
   padding-top: 72px; }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold;
   color: #3b3d47; }
 
@@ -71,6 +88,12 @@ h2 {
 
 h3 {
   font-size: 30px; }
+
+h5 {
+  font-size: 20px; }
+
+h6 {
+  font-size: 16px; }
 
 input[type='text'].inputType1 {
   width: 100%;
@@ -99,3 +122,6 @@ input[type='text'].inputType2 {
   padding: 10px 16px;
   resize: none;
   border-radius: 20px; }
+
+.bold {
+  font-weight: bold !important; }

@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+    $('select').styler({
+        selectSearch: false,
+        singleSelectzIndex: 5
+    });
+
     var sliderSumSteps = {
         points: {
             1500000:	1500000,

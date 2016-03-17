@@ -1,5 +1,6 @@
 .topBanner {
 	height: 464px;
+	padding: 47px 0 0;
 	background: url(../images/topBG.jpg) no-repeat center;
 	background-size: cover;
 	color: #fff;
@@ -8,6 +9,7 @@
 		width: 610px;
 		font-weight: normal;
 		color: inherit;
+		line-height: 89px;
 
 		.rate {
 			font-size: 90px;
@@ -16,11 +18,13 @@
 	}
 
 	.factoids {
+		margin-top: 24px;
 		font-size: 18px;
 
 		li {
 			display: inline-block;
 			margin-right: 30px;
+			line-height: 24px;
 
 			&:first-child {
 				width: 340px;
