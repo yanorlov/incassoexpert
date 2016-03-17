@@ -1,0 +1,59 @@
+.investmentsComparison {
+	height: 485px;
+	padding: 60px 0 0;
+	background: url(../images/midBg.jpg) no-repeat center;
+	background-size: cover;
+	color: #fff;
+
+	h2 {
+		color: #fff;
+	}
+
+	.investTable {
+
+		margin-top: 20px;
+		font-weight: 100;
+		text-align:  left;
+
+		.col-1 {
+			width: 310px;
+		}
+		.col-2 {
+			width: 220px;
+		}
+		.col-3 {
+			width: 240px;
+		}
+		.col-4 {
+			width: 190px;
+		}
+
+		th {
+			vertical-align: middle;
+			height: 64px;
+			border-bottom: 1px solid #fff;
+
+			&:first-child {
+				font-weight: normal;
+				padding-left: 10px;
+			}
+		}
+
+		td {
+			padding-top: 11px;
+			padding-bottom: 11px;
+
+			&:first-child {
+				padding-left: 10px;
+			}
+		}
+
+		tr:nth-child(2) td {
+			padding-top: 28px;
+		}
+
+		tr:last-child td {
+			padding-top: 20px;
+		}
+	}
+}

@@ -50,8 +50,14 @@ button {
 
 .pseudo {
   color: #1275a5;
-  border-bottom: 1px dashed #1275a5;
+  border-bottom: 1px dashed #71acc9;
   padding-bottom: 2px; }
+
+.realLink {
+  color: #007bbf;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #d0e3ed;
+  line-height: 25px; }
 
 .docLink {
   display: inline-block;
@@ -89,11 +95,18 @@ h2 {
 h3 {
   font-size: 30px; }
 
+h4 {
+  font-size: 28px; }
+
 h5 {
   font-size: 20px; }
 
 h6 {
   font-size: 16px; }
+
+.hBordo {
+  font-weight: 300;
+  color: #a23b4a; }
 
 input[type='text'].inputType1 {
   width: 100%;

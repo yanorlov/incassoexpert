@@ -43,6 +43,23 @@ $(document).ready(function() {
             console.log(ui.value);
         }
     });
+
+    $('.bxslider').bxSlider({
+        pager: false
+    });
+
+
+    var collapsed_class = '-collapsed';
+    $('.questionBlock_collapsing').hide();
+    $('.questionBlock_collapser').click(function(){
+        var $href = $($(this).data('href'));
+        if (!$href.hasClass(collapsed_class)){
+            $href.hide('fast').addClass(collapsed_class);
+        } else {
+            $href.show('fast').removeClass(collapsed_class);
+        }
+    });
+
 });
 
 function format_number(number, round) {

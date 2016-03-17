@@ -1,0 +1,36 @@
+.investmentsComparison {
+  height: 485px;
+  padding: 60px 0 0;
+  background: url(../images/midBg.jpg) no-repeat center;
+  background-size: cover;
+  color: #fff; }
+  .investmentsComparison h2 {
+    color: #fff; }
+  .investmentsComparison .investTable {
+    margin-top: 20px;
+    font-weight: 100;
+    text-align: left; }
+    .investmentsComparison .investTable .col-1 {
+      width: 310px; }
+    .investmentsComparison .investTable .col-2 {
+      width: 220px; }
+    .investmentsComparison .investTable .col-3 {
+      width: 240px; }
+    .investmentsComparison .investTable .col-4 {
+      width: 190px; }
+    .investmentsComparison .investTable th {
+      vertical-align: middle;
+      height: 64px;
+      border-bottom: 1px solid #fff; }
+      .investmentsComparison .investTable th:first-child {
+        font-weight: normal;
+        padding-left: 10px; }
+    .investmentsComparison .investTable td {
+      padding-top: 11px;
+      padding-bottom: 11px; }
+      .investmentsComparison .investTable td:first-child {
+        padding-left: 10px; }
+    .investmentsComparison .investTable tr:nth-child(2) td {
+      padding-top: 28px; }
+    .investmentsComparison .investTable tr:last-child td {
+      padding-top: 20px; }

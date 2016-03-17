@@ -19,12 +19,13 @@
 
 	.opora-col {
 		float: left;
-		width: 780px;
+		width: 720px;
 	}
 
 	.docs-col {
-		float: left;
-		width: 160px;
+		float: right;
+		width: 200px;
+		padding: 0 20px;
 	}
 
 	.insBlock {
@@ -34,6 +35,7 @@
 		.oporaFacts {
 			padding-top: 63px;
 			background: url(../images/opora.png) no-repeat left top;
+			background-size: 117px 37px;
 
 			h6 {
 				margin-bottom: 15px;
@@ -72,5 +74,16 @@
 	.mirBlock {
 		padding-bottom: 33px;
 		background: url(../images/mir.png) no-repeat left bottom;
+	}
+
+	.docItem {
+		display: block;
+		margin-bottom: 45px;
+
+		.pseudo {
+			font-size: 14px;
+			font-weight: 100;
+			margin-left: 10px;
+		}
 	}
 }

@@ -1,0 +1,43 @@
+.informationDisclosure {
+
+	padding: 53px 0 63px;
+
+	h2 {
+		margin-bottom: 17px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 26px;
+	}
+
+	.disclosureDocs {
+
+		margin-bottom: 23px;
+
+		.disclosureDocs_item {
+			display: inline-block;
+			width: 140px;
+			margin-right: 30px;
+
+			img {
+				display: block;
+				margin-bottom: 5px;
+			}
+
+			.pseudo {
+				font-size: 14px;
+				font-weight: 100;
+				color: #007bbf;
+			}
+		}
+	}
+
+	.informationDisclosure_bottom-link {
+		font-weight: 100;
+		font-size: 15px;
+		line-height: 25px;
+	}
+
+}

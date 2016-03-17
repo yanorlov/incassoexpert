@@ -1,0 +1,81 @@
+.aboutCompany {
+	padding: 53px 0 134px;
+	background: #f2f2f2;
+
+	h2 {
+		margin-bottom: 17px;
+	}
+
+	p {
+		margin-bottom: 7px;
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+}
+
+.gallery {
+	margin: 35px 5px 42px;
+
+	.bx-wrapper {
+
+		.bx-viewport {
+			box-shadow: none;
+			border: 0;
+		}
+		.bx-controls-direction a {
+			position: absolute;
+			top: 50%;
+			margin-top: -24.5px;
+			outline: 0;
+			width: 49px;
+			height: 49px;
+			text-indent: -9999px;
+			z-index: 9999;
+		}
+		.bx-prev {
+			left: -5px;
+			background: #a23b4a url(../images/ar_prev.png) no-repeat center;
+		}
+		.bx-next {
+			right: 5px;
+			background: #a23b4a url(../images/ar_next.png) no-repeat center;
+		}
+	}
+}
+
+.regulations {
+	h5 {
+		margin-bottom: 22px;
+	}
+
+	ul {
+		margin-bottom: 37px;
+
+		li {
+			display: block;
+			min-height: 17px;
+			background: url(../images/v.png) no-repeat left top;
+			padding-left: 25px;
+			margin-bottom: 11px;
+			line-height: 24px;
+			font-size: 16px;
+		}
+	}
+}
+
+.aboutCompInsurance {
+	padding-left: 167px;
+	background: url(../images/opora.png) no-repeat left top 7px;
+
+	p {
+		display: table-cell;
+		vertical-align: middle;
+		width: 380px;
+		height: 58px;
+		padding-left: 30px;
+		border-left: 1px solid #bcbcbc;
+		font-size: 16px;
+		line-height: 24px;
+	}
+}

@@ -1,0 +1,25 @@
+.informationDisclosure {
+  padding: 53px 0 63px; }
+  .informationDisclosure h2 {
+    margin-bottom: 17px; }
+  .informationDisclosure p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 26px; }
+  .informationDisclosure .disclosureDocs {
+    margin-bottom: 23px; }
+    .informationDisclosure .disclosureDocs .disclosureDocs_item {
+      display: inline-block;
+      width: 140px;
+      margin-right: 30px; }
+      .informationDisclosure .disclosureDocs .disclosureDocs_item img {
+        display: block;
+        margin-bottom: 5px; }
+      .informationDisclosure .disclosureDocs .disclosureDocs_item .pseudo {
+        font-size: 14px;
+        font-weight: 100;
+        color: #007bbf; }
+  .informationDisclosure .informationDisclosure_bottom-link {
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 25px; }
