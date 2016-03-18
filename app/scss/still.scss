@@ -1,0 +1,77 @@
+.stillGotQuestions {
+	padding: 47px 0 0;
+
+	h2 {
+		margin-bottom: 28px;
+	}
+}
+.still_col1 {
+	float: left;
+	width: 300px;
+
+	.phone {
+		font-size: 36px;
+	}
+
+	p {
+		margin-top: 5px;
+		font-size: 16px;
+		line-height: 23px;
+		font-weight: 100;
+	}
+}
+
+.still_col2 {
+	float: left;
+	width: 220px;
+}
+
+.still_col3 {
+	float: right;
+}
+
+.still_callbackForm {
+
+	text-align: center;
+
+	input[type="text"]{
+		width: 100%;
+		margin-bottom: 16px;
+	}
+
+	button {
+		margin-bottom: 8px;
+	}
+
+	span {
+		font-weight: 100;
+		font-size: 14px;
+		color: #a6a6a6;
+	}
+}
+
+.manager {
+	display: inline-block;
+	width: 130px;
+
+	& + .manager {
+		margin-left: 48px;
+	}
+
+	img {
+		width: 115px;
+		height: auto;
+	}
+
+	.manager-name {
+		display: block;
+		font-size: 14px;
+		margin-top: 3px;
+	}
+
+	.manager-pos {
+		display: block;
+		font-size: 14px;
+		color: #a6a6a6;
+	}
+}

@@ -1,7 +1,45 @@
 .faq {
   background: #f2f2f2;
   padding: 50px 0 72px; }
-  .faq .questionsBlock h4 {
-    margin-top: 36px; }
-  .faq .questionBlock_collapser {
-    cursor: pointer; }
+  .faq h2 {
+    margin-bottom: 8px; }
+  .faq .questionsBlock {
+    font-size: 16px; }
+    .faq .questionsBlock h4 {
+      margin-top: 30px;
+      margin-bottom: 16px; }
+    .faq .questionsBlock .questionBlock_leftCol {
+      float: left;
+      width: 620px; }
+    .faq .questionsBlock .questionBlock_rightCol {
+      float: left;
+      padding-left: 35px; }
+      .faq .questionsBlock .questionBlock_rightCol .person {
+        max-width: 180px;
+        margin-top: 30px; }
+        .faq .questionsBlock .questionBlock_rightCol .person img {
+          display: block;
+          padding: 0 16px;
+          border-bottom: 1px solid #bfbfbf; }
+        .faq .questionsBlock .questionBlock_rightCol .person span {
+          display: block;
+          font-size: 14px;
+          padding-left: 17px;
+          padding-top: 8px; }
+          .faq .questionsBlock .questionBlock_rightCol .person span b {
+            display: block;
+            margin-bottom: 5px; }
+          .faq .questionsBlock .questionBlock_rightCol .person span i {
+            display: block;
+            color: #686868;
+            font-style: italic; }
+  .faq .collapseBlock {
+    line-height: 24px; }
+    .faq .collapseBlock .collapseBlock_collapser {
+      margin-bottom: 16px; }
+      .faq .collapseBlock .collapseBlock_collapser a {
+        cursor: pointer; }
+    .faq .collapseBlock .collapseBlock_collapsing {
+      width: 100%; }
+      .faq .collapseBlock .collapseBlock_collapsing p {
+        margin-bottom: 16px; }

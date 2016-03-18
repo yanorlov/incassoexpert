@@ -5,10 +5,10 @@ $(document).ready(function() {
         singleSelectzIndex: 5
     });
 
-    var sliderSumSteps = {
+/*    var sliderSumSteps = {
         points: {
             1500000:	1500000,
-            3000000:	7500000,
+            5000000:	3000000,
             10000000:   10000000
         },
         steps: {
@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     minSum = 1500000;
     maxSum = 10000000;
-    default_sum = 3000000;
+    default_sum = 5000000;
 
     $('.calc_sum_slider').slider({
         min: minSum,
@@ -33,16 +33,38 @@ $(document).ready(function() {
         },
         stop: function (e, ui) {
             var val = parseInt($('.calc_sum').val().replace(/[^0-9]/g, ''));
-            /*if (check_sum){*/
+            /*if (check_sum){*//*
             if (val != default_sum) {
                 changed_sum = true;
             }
-            /*}*/
+            /*}*//*
             sum_sliding = false;
             $('.calc_sum').val(format_number(getSliderValue(sliderSumSteps, ui.value))).trigger("change");
             console.log(ui.value);
         }
     });
+
+    default_refill = 10000;
+
+    $('.calc_refill_slider').slider({
+        min: 0,
+        max: 50000,
+        step: 1000,
+        value: default_refill,
+        slide: function(e, ui) {
+            $('.calc_refill').val(format_number(ui.value)).trigger("change");
+        },
+        stop: function(e, ui) {
+            var val = parseInt($('.calc_refill').val().replace(/[^0-9]/g, ''));
+            if (check_refill){
+                if (val != default_refill) {
+                    changed_refill = true;
+                }
+            }
+            $('.calc_refill').val(format_number(ui.value)).trigger("change");
+        }
+    });*/
+
 
     $('.bxslider').bxSlider({
         pager: false
@@ -50,18 +72,15 @@ $(document).ready(function() {
 
 
     var collapsed_class = '-collapsed';
-    $('.questionBlock_collapsing').hide();
-    $('.questionBlock_collapser').click(function(){
+    $('.collapseBlock_collapsing').hide();
+    $('.collapseBlock_collapser a').click(function(){
         var $href = $($(this).data('href'));
-        if (!$href.hasClass(collapsed_class)){
-            $href.hide('fast').addClass(collapsed_class);
-        } else {
-            $href.show('fast').removeClass(collapsed_class);
-        }
+        $href.slideToggle().toggleClass(collapsed_class);
     });
 
 });
 
+/*
 function format_number(number, round) {
     var result1 = 0;
     var i1 = 0;
@@ -145,4 +164,97 @@ function setSliderValue(steps, val) {
             return res;
         }
     }
+}
+
+*/
+
+
+
+
+// MAP
+
+ymaps.ready(init);
+var map;
+
+function init(){
+    $map = $('#map');
+
+    lt = $map.attr('data-lt');
+    ln = $map.attr('data-ln');
+
+    cen_lt = $map.attr('data-cen-lt');
+    cen_ln = $map.attr('data-cen-ln');
+
+    if(lt <= 0 || ln <= 0)
+    {
+        lt = 55.767266;
+        ln = 37.627364;
+    }
+
+    if(cen_lt <= 0 || cen_ln <= 0)
+    {
+        cen_lt = 55.767423;
+        cen_ln = 37.62981;
+    }
+
+    $('.pdf_map').attr('src', '//static-maps.yandex.ru/1.x/?l=map&size=445,313&pt=' + ln + ',' + lt + ',round&z=11')
+
+    var zoom = 15;
+
+    map = new ymaps.Map("map", {
+        center: [cen_lt, cen_ln],
+        zoom: zoom,
+        controls: []
+    },{
+        suppressMapOpenBlock: true
+    });
+
+    //map.controls.add('zoomControl');
+
+    map.behaviors.disable('scrollZoom');
+
+    placemark = new ymaps.Placemark([lt, ln], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'images/baloon.png',
+        iconImageSize: [41, 80],
+        iconImageOffset: [-20.5, -80]
+    });
+
+    map.geoObjects.add(placemark);
+
+
+    /* EVENT */
+    /*    map.events.add('actionend', function (e) {
+     var new_zoom = map.getZoom();
+     if (new_zoom != zoom){
+     zoom = new_zoom;
+     if (isNewEvent('map_actions', 'mashtab')) {
+     ga('send', 'event', 'map_actions', 'mashtab');
+     }
+     sendMapAction();
+
+     }
+     }); */
+
+    /*map.events.add('boundschange', function (e) {
+        var old_c = e.get('oldCenter'),
+            new_c = e.get('newCenter'),
+            old_z = e.get('oldZoom'),
+            new_z = e.get('newZoom');
+
+        // при изменении зума автоматически меняется центр, поэтому сначала проверяется, был ли зум
+        if (old_z != new_z) {
+            if (isNewEvent('map_actions', 'mashtab')) {
+                ga('send', 'event', 'map_actions', 'mashtab');
+                sendMapAction();
+            }
+        } else if (old_c != new_c) {
+            if (isNewEvent('map_actions', 'peremeshenie')) {
+                ga('send', 'event', 'map_actions', 'peremeshenie');
+                sendMapAction();
+            }
+        }
+
+    });*/
+
 }
