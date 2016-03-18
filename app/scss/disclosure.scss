@@ -31,6 +31,14 @@
 				font-weight: 100;
 				color: #007bbf;
 			}
+
+			&:hover {
+				cursor: pointer;
+				.pseudo {
+					color: #a23b4a;
+					border-bottom: 1px dashed #e2c2c7;
+				}
+			}
 		}
 	}
 

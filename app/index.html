@@ -25,6 +25,7 @@
 	<link rel="stylesheet" href="css/faq.css">
 	<link rel="stylesheet" href="css/map.css">
 	<link rel="stylesheet" href="css/still.css">
+	<link rel="stylesheet" href="css/modals.css">
 	<!--endbuild-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
@@ -32,6 +33,8 @@
 	<script src="js/plugins/jquery.formstyler.js"></script>
 	<script src="js/plugins/jquery-ui-1.10.3.custom.min.js"></script>
 	<script src="js/plugins/jquery.bxslider.min.js"></script>
+	<script src="js/plugins/inputmask.min.js"></script>
+	<script src="js/plugins/jquery.inputmask.min.js"></script>
 	<!-- endbuild -->
 	<!--build:js js/main.js -->
 	<script src="js/main.js"></script>
@@ -81,6 +84,9 @@
 			<div class="container">
 				<div class="inside">
 					<h1>Сбережения в Москве до&nbsp;<span class="rate">36%</span></h1>
+					<span class="bubble">
+						Ставка действует до 31 апреля
+					</span>
 					<ul class="factoids">
 						<li>Ежемесячное перечисление процентов на любой счёт или капитализация</li>
 						<li>Сбережения и проценты застрахованы на всю сумму в СК ОПОРА</li>
@@ -150,14 +156,14 @@
 									</td>
 									<td>
 										<div class="calc-inputs_radio">
-											<input id="monthly" type="radio" name="monthly" class="monthly" value="monthly" checked="">
-											<label for="monthly">
+											<input id="monthly_off" type="radio" name="monthly" class="monthly" value="end_of_period" checked="">
+											<label for="monthly_off">
 												<span class="radio"></span>Добавлять к сумме вклада
 											</label>
 										</div>
 										<div class="calc-inputs_radio">
-											<input id="monthly_off" type="radio" name="monthly" class="monthly" value="endOfYear">
-											<label for="monthly_off">
+											<input id="monthly" type="radio" name="monthly" class="monthly" value="monthly">
+											<label for="monthly">
 												<span class="radio"></span>Получать проценты ежемесячно
 											</label>
 										</div>
@@ -199,9 +205,9 @@
 									<td>По программе:</td>
 									<td>
 										<span class="calc_out_prog">
-											<span class="calc_out_prog_val">
+											<a href="javascript:void(0)" class="pseudo openProgs calc_out_prog_val">
 												Долгий доходный продукт
-											</span>
+											</a>
 										</span>
 									</td>
 								</tr>
@@ -234,7 +240,7 @@
 					</span>
 					<div class="calcLinks">
 						<span>
-							<a href="#" class="pseudo">График начислений</a>
+							<a href="#" class="pseudo pre_calc_graphic">График начислений</a>
 						</span>
 						<span>
 							<a href="#" class="pseudo">Сохранить результаты</a>
@@ -255,7 +261,7 @@
 						<a href="tel:88005006000" class="phone">8 800 500-60-00</a>
 						<span class="schedule">Будни с 9:30 до 21:00, выходные с 10:00 до 19:00</span>
 						<span class="schemeAnchor">
-							<a href="#" class="pseudo">Схема проезда</a>
+							<a href="#map" class="pseudo anchor">Схема проезда</a>
 						</span>
 					</div>
 					<div class="separator">
@@ -298,7 +304,7 @@
 						<span>от 50 000</span>
 						<span>В конце срока</span>
 						<span>от 50 000</span>
-						<span><a href="#" class="pseudo">Полные условия</a></span>
+						<span><a href="#" class="pseudo compare-programs">Полные условия</a></span>
 					</div>
 					<div class="depositBlock">
 						<span class="top">Гибкий продукт</span>
@@ -310,7 +316,7 @@
 						<span>от 50 000</span>
 						<span>В конце срока</span>
 						<span>от 50 000</span>
-						<span><a href="#" class="pseudo">Полные условия</a></span>
+						<span><a href="#" class="pseudo compare-programs">Полные условия</a></span>
 					</div>
 					<div class="depositBlock">
 						<span class="top">Пассивный доход</span>
@@ -322,7 +328,7 @@
 						<span>от 50 000</span>
 						<span>В конце срока</span>
 						<span>от 50 000</span>
-						<span><a href="#" class="pseudo">Полные условия</a></span>
+						<span><a href="#" class="pseudo compare-programs">Полные условия</a></span>
 					</div>
 					<div class="depositBlock">
 						<span class="top">Моя цель</span>
@@ -334,7 +340,7 @@
 						<span>от 50 000</span>
 						<span>В конце срока</span>
 						<span>от 50 000</span>
-						<span><a href="#" class="pseudo">Полные условия</a></span>
+						<span><a href="#" class="pseudo compare-programs">Полные условия</a></span>
 					</div>
 				</div>
 			</div>
@@ -941,6 +947,204 @@
 		<footer>
 
 		</footer>
+	</div>
+	<div class="overlay">
+	</div>
+	<div class="modals">
+		<div id="modal_comparison" class="modal modal-comparison">
+			<h2>Полные условия программ</h2>
+			<ul class="tarif-tabs">
+				<li class="active" data-target="tarif1"><span class="tab">Максимальный доход</span></li>
+				<li data-target="tarif2"><span class="tab">Удобный процент</span></li>
+				<li data-target="tarif3"><span class="tab">Стабильный доход</span></li>
+				<li data-target="tarif4"><span class="tab">Моя цель</span></li>
+			</ul>
+			<div class="tarif-panes">
+				<div class="tab-pane active" id="tarif1">
+					<table class="tarif-top-table">
+						<thead>
+							<tr>
+								<td>Ставка по сбережению</td>
+								<td>6 мес. - 11 мес.</td>
+								<td>12 мес. - 17 мес.</td>
+								<td>15 мес. - 24 мес.</td>
+							</tr>
+						</thead>
+						<tr>
+							<td>От 10 000 ₽ до 499 999 ₽</td>
+							<td>16,5 %</td>
+							<td>17,5 %</td>
+							<td>18,5 %</td>
+						</tr>
+						<tr>
+							<td>От 500 000 ₽ до 999 999 ₽</td>
+							<td>17 %</td>
+							<td>18 %</td>
+							<td>19 %</td>
+						</tr>
+						<tr>
+							<td>От 1 000 000 ₽</td>
+							<td>17,5 %</td>
+							<td>18,5 %</td>
+							<td>19,5 %</td>
+						</tr>
+					</table>
+					<table class="tarif-bottom-table">
+						<tr>
+							<th>Максимальная ставка</th>
+							<td>от 10 000 ₽</td>
+						</tr>
+						<tr>
+							<th>Минимальная сумма взноса</th>
+							<td>19,5 %</td>
+						</tr>
+						<tr>
+							<th>Максимальная сумма взноса</th>
+							<td>19,5 %</td>
+						</tr>
+						<tr>
+							<th>Дополнительные взносы</th>
+							<td>
+								Возможны, в сумме не менее 1 000 рублей.<br>
+								Прием дополнительных взносов прекращается за 60 дней до окончания срока сбережения, установленного Договором, (включая дату возврата сбережения).
+							</td>
+						</tr>
+						<tr>
+							<th>Дополнительные условия</th>
+							<td>
+								Разница между суммой процентов, причитающихся Клиенту в случае досрочного расторжения договора, и суммой уже выплаченных Клиенту процентов, удерживается из суммы займа. Доход по сбережениям подлежит налогообложению по ставке налогов на доходы физических лиц.
+							</td>
+						</tr>
+					</table>
+					<table class="files-table">
+						<tr>
+							<td><a href="" class="download-file">Скачать полные условия</a></td>
+						</tr>
+					</table>
+				</div>
+				<div class="tab-pane" id="tarif2" data-tarif="tarif2_full">
+					2
+				</div>
+				<div class="tab-pane" id="tarif3" data-tarif="tarif3_full">
+					3
+				</div>
+				<div class="tab-pane" id="tarif4" data-tarif="tarif4_full">
+					4
+				</div>
+			</div>
+			<div class="close-btn">
+			</div>
+		</div>
+		<div id="modal_pre_calc" class="modal modal-pre-calc">
+			<h3>Предварительный расчет начислений</h3>
+			<table class="pre-calc-top-table">
+				<tr>
+					<th>Сумма сбережения:</th>
+					<td><span class="sumVal">300 000</span> ₽</td>
+				</tr>
+				<tr>
+					<th>Процентная ставка:</th>
+					<td><span class="percentVal">19,50</span> %</td>
+				</tr>
+				<tr>
+					<th>Срок сбережения:</th>
+					<td><span class="periodVal">12</span> мес.</td>
+				</tr>
+				<tr>
+					<th>Выплата процентов:</th>
+					<td><span class="payPercentVal">в конце срока</span></td>
+				</tr>
+			</table>
+			<h3>График начислений</h3>
+			<table class="pre-calc-bottom-table">
+				<thead>
+					<td>Номер месяца</td>
+					<td>Сумма сбережений</td>
+					<td>Пополнение</td>
+					<td>Сумма выплаченных процентов</td>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>300 000,00</td>
+						<td>0,00</td>
+						<td>4 410,59</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>304 410,59</td>
+						<td>0,00</td>
+						<td>4 714,70</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>304 410,59</td>
+						<td>0,00</td>
+						<td>4 714,70</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>304 410,59</td>
+						<td>0,00</td>
+						<td>4 714,70</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>304 410,59</td>
+						<td>0,00</td>
+						<td>4 714,70</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>304 410,59</td>
+						<td>0,00</td>
+						<td>4 714,70</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>304 410,59</td>
+						<td>0,00</td>
+						<td>4 714,70</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>304 410,59</td>
+						<td>0,00</td>
+						<td>4 714,70</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Итого:</td>
+						<td class="sumAllVal">304 410,59</td>
+						<td class="refillVal">0,00</td>
+						<td class="proceedAllVal">4 714,70</td>
+					</tr>
+				</tfoot>
+			</table>
+			<div class="pre_calc_footer clearfix">
+				<p>
+					Данный расчёт носит исключительно информационный характер, <br>
+					показывающий динамику начислений по сбережению.
+				</p>
+				<div class="pre_calc_print">
+					<a class="button">Распечатать</a>
+				</div>
+			</div>
+			<div class="close-btn">
+			</div>
+		</div>
+		<div id="modal_ask_question" class="modal modal-ask-question">
+			<h5>Вопрос <br> нашим специалистам</h5>
+			<form>
+				<input type="text" name="ask_name" placeholder="Представьтесь">
+				<input type="text" name="ask_phone" placeholder="Номер телефона">
+				<textarea class="" name="ask_message" placeholder="Вопрос"></textarea>
+				<button class="button" disabled>Отправить вопрос</button>
+			</form>
+			<div class="close-btn">
+			</div>
+		</div>
 	</div>
 </body>
 </html>

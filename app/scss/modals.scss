@@ -1,0 +1,298 @@
+.overlay {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 500;
+	background: rgba(0,0,0,.7)
+}
+
+.modals .modal {
+	display: none;
+	min-height: 51px;
+	position: absolute;
+	border: 1px solid #ebebeb;
+	background: #fff;
+	z-index: 501;
+	left: 50%;
+}
+
+.close-btn {
+	position: absolute;
+	top: 10px;
+	right: 9px;
+	width: 31px;
+	height: 31px;
+	background: #fff url(../images/close.png) no-repeat center center;
+	opacity: .3;
+	cursor: pointer;
+	transition: .3s all;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.modal-comparison {
+	width: 920px;
+	margin-left: -460px;
+	padding: 10px 0 23px 56px;
+}
+
+.modal-comparison h2 {
+	font: 700 3.2em/1 PT Serif, serif;
+	margin-top: 44px;
+}
+
+.tarif-tabs {
+	padding-top: 20px;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+.tarif-tabs li {
+	display: inline-block;
+	padding: 37px 23px 19px 23px;
+}
+
+.tarif-tabs li:first-child {
+	padding-left: 0;
+}
+
+.tarif-tabs li:last-child {
+	padding-right: 0;
+}
+
+.tarif-tabs li .tab {
+	font-size: 17px;
+	color: #26619d;
+	line-height: 1.2;
+	border-bottom: 1px dashed #26619d;
+	cursor: pointer;
+}
+
+.tarif-tabs li.active .tab {
+	color: #000;
+	font-weight: bold;
+	border: none;
+}
+
+.tarif-panes {
+}
+
+.tarif-panes .tab-pane {
+	display: none;
+}
+
+.tarif-panes .tab-pane.active {
+	display: block;
+}
+
+.tarif-top-table {
+	margin-top: 57px;
+}
+
+.tarif-top-table td {
+	font-size: 16px;
+	padding-left: 16px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-weight: bold;
+	width: 130px;
+}
+
+.tarif-top-table td:first-child {
+	width: 254px;
+}
+
+.tarif-top-table thead td {
+	font-weight: normal;
+}
+
+.tarif-top-table thead td:first-child {
+	font-weight: bold;
+	padding-left: 0;
+}
+
+.tarif-bottom-table {
+	font-size: 16px;
+	margin-bottom: 35px;
+}
+
+.tarif-bottom-table th,
+.tarif-bottom-table td {
+	vertical-align: top;
+	line-height: 1.5;
+	padding-top: 8px;
+	padding-bottom: 9px;
+}
+
+.tarif-bottom-table th {
+	font-weight: bold;
+	width: 254px;
+}
+
+.tarif-bottom-table td {
+	padding-left: 16px;
+	padding-right: 60px;
+}
+
+.files-table {
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.files-table td {
+	vertical-align: middle;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.files-table tr td:first-child {
+	width: 252px;
+}
+
+.files-table tr td:nth-child(2) {
+	padding-left: 16px;
+}
+
+.download-file {
+	font-weight: normal;
+}
+
+.files-table .button {
+	padding: 11px 25px;
+}
+
+.modal-pre-calc {
+	width: 778px;
+	margin-left: -389px;
+	padding: 20px 73px 23px 56px;
+}
+
+.modal-pre-calc h3 {
+	font-size: 25px;
+	margin-top: 38px;
+}
+
+.pre-calc-top-table {
+	margin-top: 19px;
+}
+
+.pre-calc-top-table th,
+.pre-calc-top-table td {
+	font-size: 16px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.pre-calc-top-table th {
+	width: 158px;
+}
+
+.pre-calc-top-table td {
+	padding-left: 20px;
+	font-weight: bold;
+}
+
+.pre-calc-bottom-table {
+	font-size: 14px;
+	margin-top: 23px;
+}
+
+.pre-calc-bottom-table thead td {
+	font-weight: bold;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	border-bottom: 1px solid #b7b7b7;
+}
+
+.pre-calc-bottom-table tbody tr:first-child td {
+	padding-top: 18px;
+}
+
+.pre-calc-bottom-table td {
+	padding-bottom: 20px;
+	padding-left: 15px;
+	padding-right: 40px;
+}
+
+.pre-calc-bottom-table tr td:first-child {
+	padding-left: 0;
+}
+
+.pre-calc-bottom-table tr td:last-child {
+	padding-right: 0;
+}
+
+.pre-calc-bottom-table tfoot td {
+	border-top: 1px solid #b7b7b7;
+	padding-top: 11px;
+	font-weight: bold;
+}
+
+.pre-calc-bottom-table tfoot td:first-child {
+	text-align: right;
+	padding-right: 0;
+}
+
+.pre_calc_footer {
+	margin-top: 28px;
+	margin-bottom: 20px;
+}
+
+.pre_calc_footer p {
+	float: left;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.pre_calc_print {
+	float: right;
+}
+
+.pre_calc_print .button {
+	padding-left: 52px;
+	background: #3980c3 url(../images/print.png) no-repeat center left 16px;
+}
+
+.modal-ask-question, .modal-ask-director {
+	width: 324px;
+	padding: 19px 23px 43px;
+	margin-left: -162px;
+}
+
+.modal-ask-question h5, .modal-ask-director h5 {
+	font-size: 19px;
+	line-height: 1.1;
+	margin-bottom: 16px;
+}
+
+.modal-ask-question textarea, .modal-ask-director textarea {
+	height: 140px;
+}
+
+.modal-ask-question .success, .modal-ask-director .success {
+	text-align: center;
+	display: none;
+}
+
+.modal-ask-question .success-wrap, .modal-ask-director .success-wrap {
+	padding: 33px 40px 0;
+}
+
+.success-wrap h5 {
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
+.success-wrap p {
+	font-size: 15.5px;
+	line-height: 1.3;
+}
+
+.success-wrap .button {
+	margin-top: 14px;
+	padding: 9px 27px;
+}

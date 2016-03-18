@@ -14,6 +14,34 @@
 		.rate {
 			font-size: 90px;
 			font-weight: bold;
+			position: relative;
+		}
+	}
+
+	.container {
+		position: relative;
+
+		.bubble {
+			position: absolute;
+			top: 100px;
+			left: 290px;
+			display: block;
+			background: #d83145;
+			font-size: 14px;
+			color: #fff;
+			border-radius: 4px;
+			padding: 7px 12px 6px;
+
+			&:after {
+				content: "";
+				background: url(../images/bubble_arrow.png) no-repeat center;
+				position: absolute;
+				bottom: -12px;
+				left: 13px;
+				width: 19px;
+				height: 12px;
+				display: block;
+			}
 		}
 	}
 

@@ -19,6 +19,11 @@
         font-size: 14px;
         font-weight: 100;
         color: #007bbf; }
+      .informationDisclosure .disclosureDocs .disclosureDocs_item:hover {
+        cursor: pointer; }
+        .informationDisclosure .disclosureDocs .disclosureDocs_item:hover .pseudo {
+          color: #a23b4a;
+          border-bottom: 1px dashed #e2c2c7; }
   .informationDisclosure .informationDisclosure_bottom-link {
     font-weight: 100;
     font-size: 15px;

@@ -1,19 +1,36 @@
 var arProgs = [
     {
-        adding_50_100_541_730: "11",
-        adding_50_100_366_540: "11",
-        adding_50_100_270_365: "11",
-        adding_50_100_181_270: "14",
-        adding_50_100_91_180: "24",
-        adding_50_100_31_90: "30",
-        adding_30_50_541_730: "11",
-        adding_30_50_366_540: "11",
-        adding_30_50_270_365: "11",
-        adding_30_50_181_270: "14",
-        adding_30_50_91_180: "24",
-        adding_30_50_31_90: "30",
-        adding_15_30_541_730: "11",
-        adding_15_30_366_540: "11",
+        addings:
+        [
+            {
+                fromSum: 1500000
+                toSum: 3000000,
+                fromDays: 31,
+                toDays: 90,
+                percent: 29
+            },
+            {
+                fromSum: 1500000
+                toSum: 3000000,
+                fromDays: 31,
+                toDays: 90,
+                percent: 29
+            }
+        ],
+        adding_50_100_541_730: "36",
+        adding_50_100_366_540: "35",
+        adding_50_100_270_365: "34",
+        adding_50_100_181_270: "29",
+        adding_50_100_91_180: "29",
+        adding_50_100_31_90: "29",
+        adding_30_50_541_730: "35",
+        adding_30_50_366_540: "34",
+        adding_30_50_270_365: "32",
+        adding_30_50_181_270: "29",
+        adding_30_50_91_180: "29",
+        adding_30_50_31_90: "29",
+        adding_15_30_541_730: "33",
+        adding_15_30_366_540: "31",
         adding_15_30_270_365: "29",
         adding_15_30_181_270: "29",
         adding_15_30_91_180: "29",
@@ -25,11 +42,41 @@ var arProgs = [
         maxSum: "10000000",
         minSum: "1500000",
         name: "Максимальный доход",
-        payPercent: "monthly_off",
-        percent: "19.71",
-        refill: 181,
+        payPercent: "end_of_period",
+        percent: "",
         minSavingsPeriod: "12",
-        minSavingsPeriod: "24"
+        maxSavingsPeriod: "24"
+    },
+    {
+        adding_50_100_541_730: "30",
+        adding_50_100_366_540: "30",
+        adding_50_100_270_365: "30",
+        adding_50_100_181_270: "30",
+        adding_50_100_91_180: "30",
+        adding_50_100_31_90: "0",
+        adding_30_50_541_730: "27",
+        adding_30_50_366_540: "27",
+        adding_30_50_270_365: "27",
+        adding_30_50_181_270: "27",
+        adding_30_50_91_180: "27",
+        adding_30_50_31_90: "0",
+        adding_15_30_541_730: "24",
+        adding_15_30_366_540: "24",
+        adding_15_30_270_365: "24",
+        adding_15_30_181_270: "24",
+        adding_15_30_91_180: "24",
+        adding_15_30_31_90: "24",
+        everymonth: false,
+        id: "1",
+        minRefill: "50000",
+        maxRefill: "500000",
+        maxSum: "10000000",
+        minSum: "1500000",
+        name: "Удобный процент",
+        payPercent: "monthly",
+        percent: "",
+        minSavingsPeriod: "3",
+        maxSavingsPeriod: "24"
     }
 ];
 
@@ -52,7 +99,7 @@ $(document).ready(function(){
 
 	minSum = 1500000;
 	maxSum = 10000000;
-    default_sum = 5000000;
+    default_sum = 3000000;
     default_refill = 200000;
 
 	$('.calc_sum_slider').slider({
@@ -111,7 +158,11 @@ $(document).ready(function(){
 			val = format_number(val.replace(/[^0-9]/g, ''));
 			$(this).val(val);
 			$(this).trigger("change");
-		}
+		},
+
+        click: function() {
+            this.select();
+        }
 	});
 
 	if(typeof arProgs === 'object')
@@ -215,11 +266,12 @@ function getProg(data)
 {
 	if(typeof(arProgs) === 'object')
 	{
+
 		var matchedProg;
 		$.each(arProgs, function(){
 			var $arProg = $(this)[0];
 
-			if(data.sum >= $arProg.minSum*1 && data.sum <= $arProg.maxSum*1 && data.period >= $arProg.minSavingsPeriod*1 && data.period <= $arProg.maxSavingsPeriod*1 && data.payPercent == $arProg.payPercent)
+			if(data.sum >= $arProg.minSum*1 && data.sum <= $arProg.maxSum*1 && data.period >= $arProg.minSavingsPeriod*1 && data.period <= $arProg.maxSavingsPeriod*1 && data.every >= $arProg.minRefill*1 && data.every <= $arProg.maxRefill*1 && data.payPercent == $arProg.payPercent)
 			{
 				matchedProg = $arProg;
 			}
@@ -244,11 +296,13 @@ function getCalcResult(data, prog)
 
 	monthNum = d.getMonth();
 
-    console.log(data.sum*1);
-
 	allSum = data.sum*1;
 	proceed = allDays = allProceed = finalyPercent = allRefill = 0;
 	arYear = [];
+
+    if (data.sum >= 1500000 && data.sum <= 3000000){
+        console.log('ok');
+    }
 
 	for (i = 0; i < 24; i++)
 	{
@@ -261,39 +315,33 @@ function getCalcResult(data, prog)
 
 		if(i < 3)
 		{
-			percent = prog.adding_31_90;
+			percent = prog.adding_15_30_31_90;
 		}
 		else if(i < 6)
 		{
-			percent = prog.adding_91_180;
+			percent = prog.adding_15_30_91_180;
 		}
 		else if(i < 9)
 		{
-			percent = prog.adding_181_270;
+			percent = prog.adding_15_30_181_270;
 		}
 		else if(i < 12)
 		{
-			percent = prog.adding_270_365;
+			percent = prog.adding_15_30_270_365;
 		}
 		else if(i < 18)
 		{
-			percent = prog.adding_366_540;
+			percent = prog.adding_15_30_366_540;
 		}
 		else
 		{
-			percent = prog.adding_541_730;
+			percent = prog.adding_15_30_541_730;
 		}
 
 		finalyPercent += percent * 1;
 
+        allSum += data.every;
 
-		if(i > 0)
-		{
-			if(prog.refill === true)
-				allSum += data.every;
-			else if(prog.refill == 181 && i >= 6)
-				allSum += data.every;
-		}
 		if(prog.everymonth === true && i > 0)
 		{
 			allSum += proceed;
@@ -332,6 +380,7 @@ function getCalcResult(data, prog)
 	finalyPercent = finalyPercent.toFixed(2) * 1;
 	allSum = allSum.toFixed(2) * 1;
 	allProceed = allProceed.toFixed(2) * 1;
+    console.log('perc = ' + finalyPercent);
 
 	return ({
 		'arYear': arYear,
@@ -351,8 +400,6 @@ function getCalc()
 		'payPercent': $('input.monthly:checked').val()
 	};
 
-    console.log($('select.calc_period').val());
-
 	prog = getProg(data);
 
 	if(prog !== false)
@@ -365,7 +412,6 @@ function getCalc()
 		if(typeof result === 'object')
 		{
 			$('.calc_out_sum_val').html(format_number(Math.round(result.allSum)) + ' ₽');
-            console.log(format_number(Math.round(result.allSum)));
 			$('.calc_out_prog_val').html(result.prog.name).attr('data-tarif', result.prog.id);
 			$('.pdf_prog_title').html(result.prog.name).attr('data-tarif', result.prog.id);
 			$('#calc_out_income').html(format_number(result.allProceed) + ' руб.');

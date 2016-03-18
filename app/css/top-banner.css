@@ -11,7 +11,29 @@
     line-height: 89px; }
     .topBanner h1 .rate {
       font-size: 90px;
-      font-weight: bold; }
+      font-weight: bold;
+      position: relative; }
+  .topBanner .container {
+    position: relative; }
+    .topBanner .container .bubble {
+      position: absolute;
+      top: 100px;
+      left: 290px;
+      display: block;
+      background: #d83145;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 4px;
+      padding: 7px 12px 6px; }
+      .topBanner .container .bubble:after {
+        content: "";
+        background: url(../images/bubble_arrow.png) no-repeat center;
+        position: absolute;
+        bottom: -12px;
+        left: 13px;
+        width: 19px;
+        height: 12px;
+        display: block; }
   .topBanner .factoids {
     margin-top: 24px;
     font-size: 18px; }

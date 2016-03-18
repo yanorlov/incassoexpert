@@ -5,6 +5,24 @@ $(document).ready(function() {
         singleSelectzIndex: 5
     });
 
+    var header_height = $('header').height();
+    /*$( ".slider" ).slider();*/
+
+    $(function() {
+        var wrapper = $(".wrapper");
+        var header = $("header");
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll > 0) {
+                header.addClass("fixed");
+//                wrapper.addClass("margin");
+            } else {
+                header.removeClass("fixed");
+//                wrapper.removeClass("margin");
+            }
+        });
+    });
+
 /*    var sliderSumSteps = {
         points: {
             1500000:	1500000,
@@ -78,7 +96,124 @@ $(document).ready(function() {
         $href.slideToggle().toggleClass(collapsed_class);
     });
 
+    $(".pre_calc_graphic").on("click",function () {
+        openModal("modal_pre_calc");
+        return false;
+    });
+
+    $(".openProgs").on("click",function () {
+        openModal("modal_comparison");
+        return false;
+    });
+
+    $(".compare-programs").on("click",function () {
+        $("#modal_comparison").css("top",$(window).scrollTop() + $(window).height()/8 + "px");
+        openModal("modal_comparison");
+        return false;
+    });
+
+    $(".close-btn").on("click",function () {
+        closeModal($(this).parents(".modal").attr("id"));
+    });
+
+    $(".overlay").on("click",function () {
+        closeModal();
+        return false;
+    });
+
+    $(".close-modal").on("click",function () {
+        closeModal();
+        return false;
+    });
+
+    /*$('#partial_take').change(function(){
+        if (this.checked){
+
+        }
+    });*/
+
+    $('input[name="phone"]').inputmask('+7 (999) 999 99 99');
+
+    $('form button[type="submit"]').click(function(e){
+        e.preventDefault();
+        var $form = $(this).parents('form');
+        var er = 0;
+        $form.find('input:not([type=hidden])').map(function(){
+            if(!checkInp($(this))){
+                er = 1;
+            }
+        });
+        if(!er){
+            $form.submit();
+        }
+    });
+
+    $('form input').on("keyup change", function(){
+        if ($(this).hasClass('error')) {
+            if (checkInp($(this))) {
+                $(this).removeClass('error');
+            }
+        }
+
+    });
+
+    $('.anchor').click(function(e) {
+        e.preventDefault();
+        var href = $(this).attr('href');
+        if (!href.length)
+            return;
+        var offset = 0;
+        if (!(href == "#top")){
+            offset = $(href).offset().top - header_h;
+        }
+        $("html, body")
+            .animate({scrollTop: offset}, 300);
+
+    });
+
+    function checkInp($obj){
+        switch($obj.attr('name')){
+            case 'company':
+                if(!$obj.val().length) {
+                    er = 1;
+                    $obj.addClass('error');
+                } else {
+                    er = 0;
+                    $obj.removeClass('error');
+                }
+                break;
+            case 'phone':
+                if(!$obj.inputmask("isComplete")) {
+                    er = 1;
+                    $obj.addClass('error');
+                } else {
+                    er = 0;
+                    $obj.removeClass('error');
+                }
+                break;
+        }
+        return (er?false:true);
+    }
+
 });
+
+function openModal(mod_id){
+    $(".overlay").show();
+    $("#"+mod_id).show();
+    if ($("#"+mod_id).css('position') == 'absolute') {
+        $("#"+mod_id).css('top',$(window).scrollTop() + 120);
+    }
+    return false;
+}
+
+function closeModal(mod_id){
+    if (mod_id) $("#" + mod_id).hide();
+    else $(".modals > div").hide();
+    if (!$(".modals").children("div:visible").length){
+        $(".overlay").hide();
+    }
+}
+
 
 /*
 function format_number(number, round) {

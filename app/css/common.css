@@ -24,6 +24,10 @@ a, a:focus, a:hover {
   text-decoration: none;
   color: inherit; }
 
+a:hover {
+  color: #a23b4a;
+  border-color: #e2c2c7; }
+
 button {
   background: none;
   border: 0;
@@ -48,10 +52,14 @@ button {
   border-radius: 21px;
   font-size: 16px; }
 
-.pseudo {
+.pseudo, .pseudo:focus {
   color: #1275a5;
-  border-bottom: 1px dashed #71acc9;
+  border-bottom: 1px dashed #bccee1;
   padding-bottom: 2px; }
+
+.pseudo:hover {
+  color: #a23b4a;
+  border-bottom: 1px dashed #e2c2c7; }
 
 .realLink {
   color: #007bbf;
@@ -69,7 +77,12 @@ button {
     color: #007bbf;
     font-size: 14px;
     font-weight: 100;
-    border-bottom: 1px solid #d0e3ed; }
+    border-color: 1px solid #d0e3ed; }
+  .docLink:hover {
+    cursor: pointer; }
+    .docLink:hover span {
+      color: #a23b4a;
+      border-color: #e2c2c7; }
 
 .wrapper {
   width: 100%;
@@ -135,6 +148,8 @@ input[type='text'].inputType2 {
   padding: 10px 16px;
   resize: none;
   border-radius: 20px; }
+  input[type='text'].inputType2.error {
+    border-color: #fd5752; }
 
 .bold {
   font-weight: bold !important; }

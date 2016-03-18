@@ -5,7 +5,10 @@ header {
   right: 0;
   height: 72px;
   background: #fff;
-  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);
+  z-index: 100; }
+  header.fixed {
+    position: fixed; }
   header .logo {
     display: inline-block;
     padding-top: 23px;
