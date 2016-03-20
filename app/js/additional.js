@@ -1,82 +1,299 @@
 var arProgs = [
     {
-        addings:
-        [
-            {
-                fromSum: 1500000
-                toSum: 3000000,
-                fromDays: 31,
-                toDays: 90,
-                percent: 29
-            },
-            {
-                fromSum: 1500000
-                toSum: 3000000,
-                fromDays: 31,
-                toDays: 90,
-                percent: 29
-            }
-        ],
-        adding_50_100_541_730: "36",
-        adding_50_100_366_540: "35",
-        adding_50_100_270_365: "34",
-        adding_50_100_181_270: "29",
-        adding_50_100_91_180: "29",
-        adding_50_100_31_90: "29",
-        adding_30_50_541_730: "35",
-        adding_30_50_366_540: "34",
-        adding_30_50_270_365: "32",
-        adding_30_50_181_270: "29",
-        adding_30_50_91_180: "29",
-        adding_30_50_31_90: "29",
-        adding_15_30_541_730: "33",
-        adding_15_30_366_540: "31",
-        adding_15_30_270_365: "29",
-        adding_15_30_181_270: "29",
-        adding_15_30_91_180: "29",
-        adding_15_30_31_90: "29",
-        everymonth: false,
+        monthly: false,
+        end_of_period: true,
+        partial: false,
         id: "1",
         minRefill: "50000",
         maxRefill: "500000",
-        maxSum: "10000000",
-        minSum: "1500000",
         name: "Максимальный доход",
-        payPercent: "end_of_period",
-        percent: "",
-        minSavingsPeriod: "12",
-        maxSavingsPeriod: "24"
+        priority: true,
+        addings: {
+            "1.5-3": {
+                0: {
+                    months: 12,
+                    percent: 29
+                },
+                1: {
+                    months: 18,
+                    percent: 31
+                },
+                2: {
+                    months: 24,
+                    percent: 33
+                }
+            },
+            "3-5": {
+                0: {
+                    months: 12,
+                    percent: 32
+                },
+                1: {
+                    months: 18,
+                    percent: 34
+                },
+                2: {
+                    months: 24,
+                    percent: 35
+                }
+            },
+            "5-10": {
+                0: {
+                    months: 12,
+                    percent: 34
+                },
+                1: {
+                    months: 18,
+                    percent: 35
+                },
+                2: {
+                    months: 24,
+                    percent: 36
+                }
+            }
+        }
     },
     {
-        adding_50_100_541_730: "30",
-        adding_50_100_366_540: "30",
-        adding_50_100_270_365: "30",
-        adding_50_100_181_270: "30",
-        adding_50_100_91_180: "30",
-        adding_50_100_31_90: "0",
-        adding_30_50_541_730: "27",
-        adding_30_50_366_540: "27",
-        adding_30_50_270_365: "27",
-        adding_30_50_181_270: "27",
-        adding_30_50_91_180: "27",
-        adding_30_50_31_90: "0",
-        adding_15_30_541_730: "24",
-        adding_15_30_366_540: "24",
-        adding_15_30_270_365: "24",
-        adding_15_30_181_270: "24",
-        adding_15_30_91_180: "24",
-        adding_15_30_31_90: "24",
-        everymonth: false,
-        id: "1",
+        monthly: true,
+        end_of_period: true,
+        partial: true,
+        id: "2",
         minRefill: "50000",
         maxRefill: "500000",
-        maxSum: "10000000",
-        minSum: "1500000",
         name: "Удобный процент",
-        payPercent: "monthly",
-        percent: "",
-        minSavingsPeriod: "3",
-        maxSavingsPeriod: "24"
+        priority: false,
+        addings: {
+            "1.5-3": {
+                0: {
+                    months: 3,
+                    percent: 24
+                },
+                1: {
+                    months: 6,
+                    percent: 24
+                },
+                2: {
+                    months: 9,
+                    percent: 24
+                },
+                3: {
+                    months: 12,
+                    percent: 24
+                },
+                4: {
+                    months: 18,
+                    percent: 24
+                },
+                5: {
+                    months: 24,
+                    percent: 24
+                }
+            },
+            "3-5": {
+                0: {
+                    months: 6,
+                    percent: 27
+                },
+                1: {
+                    months: 9,
+                    percent: 27
+                },
+                2: {
+                    months: 12,
+                    percent: 27
+                },
+                3: {
+                    months: 18,
+                    percent: 27
+                },
+                4: {
+                    months: 24,
+                    percent: 27
+                }
+            },
+            "5-10": {
+                0: {
+                    months: 6,
+                    percent: 30
+                },
+                1: {
+                    months: 9,
+                    percent: 30
+                },
+                2: {
+                    months: 12,
+                    percent: 30
+                },
+                3: {
+                    months: 18,
+                    percent: 30
+                },
+                4: {
+                    months: 24,
+                    percent: 30
+                }
+            }
+        }
+    },
+    {
+        monthly: true, // ежемесячная выплата
+        end_of_period: false, // в конце срока
+        partial: false, // частичная выплата без потери
+        id: "3",
+        minRefill: "50000", // минимальное пополнение
+        maxRefill: "500000", // максимальное пополнение
+        name: "Стабильный доход",
+        priority: false,
+        addings: { // массив пар срок => процент
+            "1.5-3": {
+                0: {
+                    months: 3,
+                    percent: 24
+                },
+                1: {
+                    months: 6,
+                    percent: 24
+                },
+                2: {
+                    months: 9,
+                    percent: 24
+                },
+                3: {
+                    months: 12,
+                    percent: 24
+                },
+                4: {
+                    months: 18,
+                    percent: 24
+                },
+                5: {
+                    months: 24,
+                    percent: 24
+                }
+            },
+            "3-5": {
+                0: {
+                    months: 6,
+                    percent: 27
+                },
+                1: {
+                    months: 9,
+                    percent: 27
+                },
+                2: {
+                    months: 12,
+                    percent: 27
+                },
+                3: {
+                    months: 18,
+                    percent: 27
+                },
+                4: {
+                    months: 24,
+                    percent: 27
+                }
+            },
+            "5-10": {
+                0: {
+                    months: 6,
+                    percent: 30
+                },
+                1: {
+                    months: 9,
+                    percent: 30
+                },
+                2: {
+                    months: 12,
+                    percent: 30
+                },
+                3: {
+                    months: 18,
+                    percent: 30
+                },
+                4: {
+                    months: 24,
+                    percent: 30
+                }
+            }
+        }
+    },
+    {
+        monthly: false, // ежемесячная выплата
+        end_of_period: true, // в конце срока
+        partial: false, // частичная выплата без потери
+        id: "4",
+        minRefill: "1000", // минимальное пополнение
+        maxRefill: "500000", // максимальное пополнение
+        name: "Моя цель",
+        priority: false,
+        addings: { // массив пар срок => процент
+            "1.5-3": {
+                0: {
+                    months: 6,
+                    percent: 27
+                },
+                1: {
+                    months: 9,
+                    percent: 28
+                },
+                2: {
+                    months: 12,
+                    percent: 29
+                },
+                3: {
+                    months: 18,
+                    percent: 29
+                },
+                4: {
+                    months: 24,
+                    percent: 29
+                }
+            },
+            "3-5": {
+                0: {
+                    months: 6,
+                    percent: 29
+                },
+                1: {
+                    months: 9,
+                    percent: 30
+                },
+                2: {
+                    months: 12,
+                    percent: 31
+                },
+                3: {
+                    months: 18,
+                    percent: 31
+                },
+                4: {
+                    months: 24,
+                    percent: 31
+                }
+            },
+            "5-10": {
+                0: {
+                    months: 6,
+                    percent: 30
+                },
+                1: {
+                    months: 9,
+                    percent: 31
+                },
+                2: {
+                    months: 12,
+                    percent: 32
+                },
+                3: {
+                    months: 18,
+                    percent: 32
+                },
+                4: {
+                    months: 24,
+                    percent: 32
+                }
+            }
+        }
     }
 ];
 
@@ -266,15 +483,55 @@ function getProg(data)
 {
 	if(typeof(arProgs) === 'object')
 	{
+        // ищем подходяшую программу
+		var matchedProg = false;
+        var found = false;
+        var interval = '';
 
-		var matchedProg;
 		$.each(arProgs, function(){
-			var $arProg = $(this)[0];
 
-			if(data.sum >= $arProg.minSum*1 && data.sum <= $arProg.maxSum*1 && data.period >= $arProg.minSavingsPeriod*1 && data.period <= $arProg.maxSavingsPeriod*1 && data.every >= $arProg.minRefill*1 && data.every <= $arProg.maxRefill*1 && data.payPercent == $arProg.payPercent)
-			{
-				matchedProg = $arProg;
-			}
+            var $arProg = $(this)[0];
+
+            // $arProg[data.payType] == true - проверка на доступность данного метода оплаты для программы
+            if(data.freePartial == $arProg.partial && $arProg[data.payType] && data.every >= $arProg.minRefill && data.every <= $arProg.maxRefill) {
+
+                var sum = data.sum;
+
+                if (sum >= 1500000 && sum <= 3000000) {
+                    interval = "1.5-3";
+                } else if (sum <= 5000000) {
+                    interval = "3-5";
+                } else if (sum <= 10000000) {
+                    interval = "5-10";
+                } else {
+                    interval = false;
+                }
+
+                if (interval) {
+
+                    var row = $arProg.addings[interval];
+                    if (row) {
+
+                        $.each(row, function (key, cell){
+
+                            if (cell.months == data.period) {
+                                if (!found) {
+                                    matchedProg = {
+                                        'prog': $arProg,
+                                        'percent': cell.percent
+                                    };
+                                    found = true;
+                                } else if ($arProg.priority == true){
+                                    matchedProg = {
+                                        'prog': $arProg,
+                                        'percent': cell.percent
+                                    };
+                                }
+                            }
+                        });
+                    }
+                }
+            }
 		});
 
 		if(matchedProg)
@@ -282,13 +539,64 @@ function getProg(data)
 			return matchedProg;
 		}
 		else
-			return false;
+        {
+            console.log('error: no match');
+            return false;
+        }
 	} else {
-        console.log('none');
+        console.log('error: no input progs');
     }
 }
 
-function getCalcResult(data, prog)
+
+function getCalcResult(data, prog) {
+
+    var allPeriod = [];
+    var allSum = data.sum * 1;
+    var finalPercent = (prog.percent/100)/12; // ежемесячный процент = годовой / 12
+    var totalIncome = 0;
+
+    var refill = 0;
+
+    if (data.every)
+        refill = data.every;
+
+    var monthIncome = (allSum*finalPercent).toFixed(2)*1;
+
+
+    // калькуляция на срок; если помесячно, то не считать доход каждый раз, он не меняется
+    for (i = 1; i <= data.period; i++) {
+
+        if (data.payType != 'monthly') {
+            monthIncome = (allSum*finalPercent).toFixed(2)*1;
+        }
+
+        totalIncome += monthIncome;
+
+        arMonth = {
+            "income": monthIncome,
+            "refill": refill,
+            "sum": allSum
+        };
+
+        allPeriod.push(arMonth);
+
+        allSum = (allSum + monthIncome + refill).toFixed(2)*1;  // УТОЧНИТЬ: процент считать ДО или ПОСЛЕ пополнения
+    }
+
+    return {
+        "id": prog.prog.id,
+        "name": prog.prog.name,
+        "allPeriod": allPeriod,
+        "allSum": allSum,
+        "totalIncome": totalIncome,
+        "percent": prog.percent
+    };
+
+//    console.log(allSum.toFixed(2)*1);
+}
+
+/*function getCalcResult(data, prog)
 {
 	var arResult = [];
 
@@ -300,45 +608,67 @@ function getCalcResult(data, prog)
 	proceed = allDays = allProceed = finalyPercent = allRefill = 0;
 	arYear = [];
 
-    if (data.sum >= 1500000 && data.sum <= 3000000){
-        console.log('ok');
+    for (i = 0; i < data.period; i++)
+    {
+        allDays += daysInMonth(monthNum+i);
+    }
+	
+    $.each(prog.addings, function(adding){
+        if ((data.sum >= adding.fromSum) && (data.sum < adding.toSum) && (allDays >= adding.fromDays) && (allDays < adding.toDays)){
+            finalyPercent = adding.percent*1;
+        }
+    });
+
+    for (i = 0; i < data.period; i++) {
+
+        days = daysInMonth(monthNum+i);
+
+        if(i > 0)
+        {
+            if(prog.refill === true)
+                allSum += data.every;
+        }
+        if(prog.everymonth === true && i > 0)
+        {
+            allSum += proceed;
+        }
+
+        allRefill += data.every;
+
+        proceed = ((allSum * finalyPercent / 100) * days) / allDays;
+        proceed =  proceed.toFixed(2) * 1;
+
+        allProceed += proceed;
+
+        arYear.push({
+            'sum': allSum.toFixed(2) * 1,
+            'proceed': proceed,
+            'percent': finalyPercent
+        });
+
+        if(prog.everymonth === false)
+            allSum += allProceed;
+        else
+            allSum += proceed;
+
+        //finalyPercent = ((allProceed / data.sum) * 100);
+        finalyPercent = finalyPercent / 12;
+        finalyPercent = finalyPercent.toFixed(2) * 1;
+        allSum = allSum.toFixed(2) * 1;
+        allProceed = allProceed.toFixed(2) * 1;
+        console.log('perc = ' + finalyPercent);
+
+        return ({
+            'arYear': arYear,
+            'allProceed': allProceed,
+            'allRefill': allRefill,
+            'allSum': allSum,
+            'percent': finalyPercent,
+            'prog': prog});
     }
 
-	for (i = 0; i < 24; i++)
-	{
-		allDays += daysInMonth(monthNum+i);
-	}
 
-	for (i = 0; i < 24; i++)
-	{
-		days = daysInMonth(monthNum+i);
-
-		if(i < 3)
-		{
-			percent = prog.adding_15_30_31_90;
-		}
-		else if(i < 6)
-		{
-			percent = prog.adding_15_30_91_180;
-		}
-		else if(i < 9)
-		{
-			percent = prog.adding_15_30_181_270;
-		}
-		else if(i < 12)
-		{
-			percent = prog.adding_15_30_270_365;
-		}
-		else if(i < 18)
-		{
-			percent = prog.adding_15_30_366_540;
-		}
-		else
-		{
-			percent = prog.adding_15_30_541_730;
-		}
-
-		finalyPercent += percent * 1;
+    /*
 
         allSum += data.every;
 
@@ -361,35 +691,8 @@ function getCalcResult(data, prog)
 
 		proceed += ndfl;*/
 
-		allProceed += proceed;
-
-		arYear.push({
-			'sum': allSum.toFixed(2) * 1,
-			'proceed': proceed,
-			'percent': percent
-		});
-	}
-
-	if(prog.everymonth === false)
-		allSum += allProceed;
-	else
-		allSum += proceed;
-
-	//finalyPercent = ((allProceed / data.sum) * 100);
-	finalyPercent = finalyPercent / 12;
-	finalyPercent = finalyPercent.toFixed(2) * 1;
-	allSum = allSum.toFixed(2) * 1;
-	allProceed = allProceed.toFixed(2) * 1;
-    console.log('perc = ' + finalyPercent);
-
-	return ({
-		'arYear': arYear,
-		'allProceed': allProceed,
-		'allRefill': allRefill,
-		'allSum': allSum,
-		'percent': finalyPercent,
-		'prog': prog});
-}
+	/*
+}*/
 
 function getCalc()
 {
@@ -397,32 +700,36 @@ function getCalc()
 		'sum': $('.calc_sum').val().replace(/[^0-9]/g, '')*1,
 		'period': $('select.calc_period').val()*1,
 		'every': $('.calc_refill').val().replace(/[^0-9]/g, '')*1,
-		'payPercent': $('input.monthly:checked').val()
+		'payType': $('input.monthly:checked').val(),
+        'freePartial': ($('input#partial_take:checked').val()) ? true : false
 	};
 
 	prog = getProg(data);
 
 	if(prog !== false)
 	{
-		$('.calc-output-table').show();
-		$('.error-calc').hide();
+        $('.calcResult').show();
+        $('.calcError').hide();
 
 		result = getCalcResult(data, prog);
+
+        console.log(prog.prog.name);
 
 		if(typeof result === 'object')
 		{
 			$('.calc_out_sum_val').html(format_number(Math.round(result.allSum)) + ' ₽');
-			$('.calc_out_prog_val').html(result.prog.name).attr('data-tarif', result.prog.id);
-			$('.pdf_prog_title').html(result.prog.name).attr('data-tarif', result.prog.id);
-			$('#calc_out_income').html(format_number(result.allProceed) + ' руб.');
-			$('#calc_out_percent').html(prog.percent + ' %');
+			$('.calc_out_prog_val').html(result.name).attr('data-tarif', result.id);
+			$('.pdf_prog_title').html(result.name).attr('data-tarif', result.id);
+			$('.calc_out_income_val').html(format_number(result.totalIncome) + ' ₽');
+			$('.calc_out_rate_val').html(prog.percent + ' %');
 
+            /*
 			$('.percentVal').html(prog.percent);
             $('.pdf_percent_val').html(prog.percent);
 
 			$('.sumVal').html(format_number(data.sum));
 			$('.periodVal').html(data.period);
-			$('.payPercentVal').html(data.payPercent == 'monthly' ? 'Ежемесячная выплата' : 'В конце срока');
+			$('.payMonthlyVal').html(data.payMonthly == 'monthly' ? 'Ежемесячная выплата' : 'В конце срока');
 
 			$('.sumAllVal').html(format_number(result.allSum, false));
 			$('.refillVal').html(format_number(data.every));
@@ -486,22 +793,33 @@ function getCalc()
 				if(prog.refill == 181)
 					$('.refillS').html('(с 181 дня)');
 
-			}
+			}*/
 		}
 	}
 	else
 	{
-		$('.error-calc').show();
-		$('.calc-output-table').hide();
+		$('.calcError').show();
+		$('.calcResult').hide();
 	}
 	return false;
 }
 
 function daysInMonth(month)
 {
+	year = d.getFullYear();
+	
 	if(month >= 12)
-		month = 12 - month;
-
+	{
+		do {
+			month = month - 12;
+			
+			year++			
+		} while (month >= 12)
+	}
+	
 	d = new Date();
-	return 33 - new Date(d.getFullYear(), month, 33).getDate();
+    
+    days = 33 - new Date(year, month, 33).getDate();
+    
+	return days;
 }
