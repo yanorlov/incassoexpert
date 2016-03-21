@@ -49,3 +49,26 @@
     display: block;
     font-size: 14px;
     color: #a6a6a6; }
+
+.preFooter {
+  margin-top: 25px;
+  border-top: 1px solid #dcdcdc;
+  padding: 17px 0 50px; }
+  .preFooter span {
+    display: inline-block;
+    white-space: nowrap;
+    height: 56px;
+    line-height: 56px;
+    margin-right: 50px; }
+  .preFooter .preFootCB {
+    background: url(../images/cb.png) no-repeat left center;
+    background-size: 50px;
+    padding-left: 70px; }
+  .preFooter .preFootRate {
+    background: url(../images/rub.png) no-repeat left center;
+    background-size: 47px;
+    padding-left: 60px; }
+  .preFooter .preFootOpora {
+    background: url(../images/opora.png) no-repeat left center;
+    background-size: 126px 40px;
+    padding-left: 148px; }

@@ -195,6 +195,14 @@ $(document).ready(function() {
         return (er?false:true);
     }
 
+    $(".tabslist a").click(function(){
+        var href = '#' + $(this).data('target');
+        $(".tabslist li").removeClass('active');
+        $(this).parents('li').addClass('active');
+        $('.tabsItems_item').removeClass('active');
+        $(href).addClass('active');
+    });
+
 });
 
 function openModal(mod_id){

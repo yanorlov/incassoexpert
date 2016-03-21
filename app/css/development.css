@@ -1,0 +1,80 @@
+.companyDevelopment {
+  height: 485px;
+  padding: 49px 0;
+  background: url(../images/botBg.jpg) no-repeat center;
+  background-size: cover; }
+  .companyDevelopment h2 {
+    color: #fff;
+    margin-bottom: 30px; }
+
+.bullseyesTabs .tabslist {
+  position: relative; }
+  .bullseyesTabs .tabslist li {
+    display: inline-block;
+    width: 170px;
+    text-align: center; }
+    .bullseyesTabs .tabslist li:first-child {
+      margin-left: -69px; }
+    .bullseyesTabs .tabslist li a {
+      display: inline-block;
+      color: #fff;
+      padding-bottom: 2px;
+      border-bottom: 1px dashed #fff;
+      cursor: pointer;
+      position: relative;
+      padding-top: 35px; }
+      .bullseyesTabs .tabslist li a:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -13px;
+        content: "";
+        display: block;
+        width: 26px;
+        height: 26px;
+        border-radius: 13px;
+        background: #fff;
+        z-index: 10; }
+    .bullseyesTabs .tabslist li.active a:after {
+      width: 12px;
+      height: 12px;
+      border-radius: 6px;
+      background: #d93548;
+      position: absolute;
+      top: 7px;
+      left: 50%;
+      margin-left: -6px;
+      content: "";
+      z-index: 12; }
+  .bullseyesTabs .tabslist:after {
+    position: absolute;
+    top: 12px;
+    left: -3000px;
+    right: -3000px;
+    height: 1px;
+    background: #fff;
+    content: "";
+    display: block;
+    z-index: 8; }
+
+.bullseyesTabs .bullsItems {
+  padding-top: 35px; }
+  .bullseyesTabs .bullsItems .tabsItems_item {
+    display: none;
+    color: #fff; }
+    .bullseyesTabs .bullsItems .tabsItems_item ul li {
+      padding-left: 23px;
+      position: relative;
+      margin-bottom: 13px; }
+      .bullseyesTabs .bullsItems .tabsItems_item ul li:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -7px;
+        width: 14px;
+        height: 18px;
+        background: url(../images/v_white.png) no-repeat center; }
+    .bullseyesTabs .bullsItems .tabsItems_item.active {
+      display: block; }

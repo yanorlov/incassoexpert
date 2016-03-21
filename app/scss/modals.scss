@@ -296,3 +296,16 @@
 	margin-top: 14px;
 	padding: 9px 27px;
 }
+
+.modal-view-doc {
+	width: 700px;
+	margin-left: -350px;
+	padding: 0 40px 0 0;
+
+	.viewDoc_inner {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

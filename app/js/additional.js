@@ -9,48 +9,48 @@ var arProgs = [
         name: "Максимальный доход",
         priority: true,
         addings: {
-            "1.5-3": {
-                0: {
+            "1.5-3": [
+                {
                     months: 12,
                     percent: 29
                 },
-                1: {
+                {
                     months: 18,
                     percent: 31
                 },
-                2: {
+                {
                     months: 24,
                     percent: 33
                 }
-            },
-            "3-5": {
-                0: {
+            ],
+            "3-5": [
+                {
                     months: 12,
                     percent: 32
                 },
-                1: {
+                {
                     months: 18,
                     percent: 34
                 },
-                2: {
+                {
                     months: 24,
                     percent: 35
                 }
-            },
-            "5-10": {
-                0: {
+            ],
+            "5-10": [
+                {
                     months: 12,
                     percent: 34
                 },
-                1: {
+                {
                     months: 18,
                     percent: 35
                 },
-                2: {
+                {
                     months: 24,
                     percent: 36
                 }
-            }
+            ]
         }
     },
     {
@@ -63,76 +63,76 @@ var arProgs = [
         name: "Удобный процент",
         priority: false,
         addings: {
-            "1.5-3": {
-                0: {
+            "1.5-3": [
+                {
                     months: 3,
                     percent: 24
                 },
-                1: {
+                {
                     months: 6,
                     percent: 24
                 },
-                2: {
+                {
                     months: 9,
                     percent: 24
                 },
-                3: {
+                {
                     months: 12,
                     percent: 24
                 },
-                4: {
+                {
                     months: 18,
                     percent: 24
                 },
-                5: {
+                {
                     months: 24,
                     percent: 24
                 }
-            },
-            "3-5": {
-                0: {
+            ],
+            "3-5": [
+                {
                     months: 6,
                     percent: 27
                 },
-                1: {
+                {
                     months: 9,
                     percent: 27
                 },
-                2: {
+                {
                     months: 12,
                     percent: 27
                 },
-                3: {
+                {
                     months: 18,
                     percent: 27
                 },
-                4: {
+                {
                     months: 24,
                     percent: 27
                 }
-            },
-            "5-10": {
-                0: {
+            ],
+            "5-10": [
+                {
                     months: 6,
                     percent: 30
                 },
-                1: {
+                {
                     months: 9,
                     percent: 30
                 },
-                2: {
+                {
                     months: 12,
                     percent: 30
                 },
-                3: {
+                {
                     months: 18,
                     percent: 30
                 },
-                4: {
+                {
                     months: 24,
                     percent: 30
                 }
-            }
+            ]
         }
     },
     {
@@ -145,76 +145,76 @@ var arProgs = [
         name: "Стабильный доход",
         priority: false,
         addings: { // массив пар срок => процент
-            "1.5-3": {
-                0: {
+            "1.5-3": [
+                {
                     months: 3,
                     percent: 24
                 },
-                1: {
+                {
                     months: 6,
                     percent: 24
                 },
-                2: {
+                {
                     months: 9,
                     percent: 24
                 },
-                3: {
+                {
                     months: 12,
                     percent: 24
                 },
-                4: {
+                {
                     months: 18,
                     percent: 24
                 },
-                5: {
+                {
                     months: 24,
                     percent: 24
                 }
-            },
-            "3-5": {
-                0: {
+            ],
+            "3-5": [
+                {
                     months: 6,
                     percent: 27
                 },
-                1: {
+                {
                     months: 9,
                     percent: 27
                 },
-                2: {
+                {
                     months: 12,
                     percent: 27
                 },
-                3: {
+                {
                     months: 18,
                     percent: 27
                 },
-                4: {
+                {
                     months: 24,
                     percent: 27
                 }
-            },
-            "5-10": {
-                0: {
+            ],
+            "5-10": [
+                {
                     months: 6,
                     percent: 30
                 },
-                1: {
+                {
                     months: 9,
                     percent: 30
                 },
-                2: {
+                {
                     months: 12,
                     percent: 30
                 },
-                3: {
+                {
                     months: 18,
                     percent: 30
                 },
-                4: {
+                {
                     months: 24,
                     percent: 30
                 }
-            }
+            ]
         }
     },
     {
@@ -227,72 +227,72 @@ var arProgs = [
         name: "Моя цель",
         priority: false,
         addings: { // массив пар срок => процент
-            "1.5-3": {
-                0: {
+            "1.5-3": [
+                {
                     months: 6,
                     percent: 27
                 },
-                1: {
+                {
                     months: 9,
                     percent: 28
                 },
-                2: {
+                {
                     months: 12,
                     percent: 29
                 },
-                3: {
+                {
                     months: 18,
                     percent: 29
                 },
-                4: {
+                {
                     months: 24,
                     percent: 29
                 }
-            },
-            "3-5": {
-                0: {
+            ],
+            "3-5": [
+                {
                     months: 6,
                     percent: 29
                 },
-                1: {
+                {
                     months: 9,
                     percent: 30
                 },
-                2: {
+                {
                     months: 12,
                     percent: 31
                 },
-                3: {
+                {
                     months: 18,
                     percent: 31
                 },
-                4: {
+                {
                     months: 24,
                     percent: 31
                 }
-            },
-            "5-10": {
-                0: {
+            ],
+            "5-10": [
+                {
                     months: 6,
                     percent: 30
                 },
-                1: {
+                {
                     months: 9,
                     percent: 31
                 },
-                2: {
+                {
                     months: 12,
                     percent: 32
                 },
-                3: {
+                {
                     months: 18,
                     percent: 32
                 },
-                4: {
+                {
                     months: 24,
                     percent: 32
                 }
-            }
+            ]
         }
     }
 ];

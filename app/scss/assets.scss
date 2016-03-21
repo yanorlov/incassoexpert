@@ -1,0 +1,120 @@
+.assets {
+
+	padding: 60px 0 50px;
+
+	h2 {
+		margin-bottom: 15px;
+	}
+
+	& > p {
+		width: 685px;
+		margin-bottom: 16px;
+	}
+
+	.briefVal {
+		font-size: 37px;
+		color: #a23b4a;
+	}
+	.briefText {
+		line-height: 22px;
+		font-size: 16px;
+	}
+}
+
+.assetsIncome {
+
+	margin-top: 25px;
+
+	h5 {
+		margin-bottom: 20px;
+	}
+
+	.assetsIncome_Total {
+		display: block;
+		float: left;
+		width: 242px;
+		height: 84px;
+		background: url(../images/frame-angle.png) no-repeat center;
+		line-height: 84px;
+
+		span {
+			display: block;
+			width: 216px;
+			text-align: center;
+			font-size: 42px;
+			font-weight: bold;
+			color: #a23b4a;
+		}
+	}
+
+	.assetsIncome_Part {
+		display: block;
+		float: left;
+		height: 84px;
+		margin-left: 38px;
+		padding-top: 15px;
+
+		p {
+			font-size: 14px;
+		}
+
+		span {
+			display: block;
+			margin-top: 3px;
+			font-size: 37px;
+			font-weight: bold;
+			color: #a23b4a;
+		}
+	}
+}
+
+.borrowers {
+	.borrowersTabs {
+
+	}
+
+	.leftCol {
+		width: 250px;
+		float: left;
+	}
+
+	.rightCol {
+		//width: ;
+		float: left;
+	}
+
+	.tabslist {
+
+		li {
+
+			margin-left: -10px;
+			a {
+				display: inline-block;
+				font-size: 16px;
+				line-height: 20px;
+				padding: 10px 15px;
+				border-radius: 50px;
+				background: transparent;
+			}
+
+			&.active a {
+				background: #a23b4a;
+
+				.pseudo {
+					color: #fff;
+					border: none;
+				}
+			}
+		}
+	}
+
+	.tabsItems {
+		.tabsItems_item {
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		}
+	}
+}
