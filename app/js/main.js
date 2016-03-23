@@ -220,6 +220,9 @@ function closeModal(mod_id){
     if (!$(".modals").children("div:visible").length){
         $(".overlay").hide();
     }
+    if (mod_id == "modal_view_doc"){
+        $('#modal_view_doc img').attr('src', '');
+    }
 }
 
 
@@ -352,7 +355,7 @@ function init(){
         suppressMapOpenBlock: true
     });
 
-    //map.controls.add('zoomControl');
+    map.controls.add('zoomControl');
 
     map.behaviors.disable('scrollZoom');
 

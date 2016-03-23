@@ -16,9 +16,22 @@
 		position: relative;
 
 		li {
+			position: relative;
 			display: inline-block;
 			width: 170px;
 			text-align: center;
+
+			&.future:after {
+				content: "В планах";
+				position: absolute;
+				display: block;
+				top: -30px;
+				left: 50%;
+				margin-left: -15px;
+				color: #fff;
+				font-weight: 100;
+				font-size: 16px;
+			}
 
 			&:first-child {
 				margin-left: -69px;

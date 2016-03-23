@@ -99,7 +99,7 @@
 	padding-top: 8px;
 	padding-bottom: 8px;
 	font-weight: bold;
-	width: 130px;
+	width: 85px;
 }
 
 .tarif-top-table td:first-child {
@@ -130,6 +130,7 @@
 
 .tarif-bottom-table th {
 	font-weight: bold;
+	text-align: left;
 	width: 254px;
 }
 
@@ -298,8 +299,8 @@
 }
 
 .modal-view-doc {
-	width: 700px;
-	margin-left: -350px;
+	width: 800px;
+	margin-left: -400px;
 	padding: 0 40px 0 0;
 
 	.viewDoc_inner {

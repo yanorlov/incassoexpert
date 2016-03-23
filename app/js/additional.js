@@ -768,9 +768,6 @@ function getCalc()
 			$('.pdf_sumall').html(format_number(result.allSum));
 			$('.pdf_profit').html(format_number(result.allProceed)+' ₽');
 
-			pdfHref = '/pdf/?type=calc&city=' + location.pathname.replace(/\//g, '') + '&sum=' + data.sum + '&progId=' + prog.id +'&period=' + data.period +'&refill=' + data.every + '&sumAll=' + result.allSum + '&proceedAll=' + result.allProceed + '&percent=' + result.percent;
-
-			$('.p-link.print-map, .p-link.test-pdf').attr('href', pdfHref);
 
 			$('.refillS').html('');
 

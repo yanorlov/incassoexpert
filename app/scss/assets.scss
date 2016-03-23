@@ -69,8 +69,16 @@
 }
 
 .borrowers {
-	.borrowersTabs {
 
+	h2 {
+		margin-bottom: 15px;
+	}
+
+	padding-bottom: 50px;
+
+	.borrowersTabs {
+		border-top: 1px solid #eeeeee;
+		padding-top: 22px;
 	}
 
 	.leftCol {
@@ -79,7 +87,7 @@
 	}
 
 	.rightCol {
-		//width: ;
+		width: 647px;
 		float: left;
 	}
 
@@ -88,6 +96,7 @@
 		li {
 
 			margin-left: -10px;
+			margin-bottom: 8px;
 			a {
 				display: inline-block;
 				font-size: 16px;
@@ -112,9 +121,107 @@
 		.tabsItems_item {
 			display: none;
 
+			h4 {
+				margin-bottom: 8px;
+			}
+
+			.sub {
+				font-style: italic;
+				font-size: 16px;
+				display: block;
+				margin-bottom: 20px;
+			}
+
+			.tabDigits {
+
+				margin-bottom: 20px;
+
+				.digitLeft {
+					float: left;
+					width: 216px;
+				}
+				.digitCenter {
+					float: left;
+					width: 231px;
+				}
+				.digitRight {
+					float: left;
+				}
+
+				p {
+					font-size: 17.82px;
+					margin-bottom: 4px;
+				}
+
+				.digit {
+
+					color: #a23b4a;
+					font-size: 23.75px;
+
+					.value {
+						font-size: 41.57px;
+						font-weight: bold;
+					}
+				}
+			}
+
+			.tabBody {
+				p {
+					line-height: 24px;
+					margin-bottom: 8px;
+				}
+
+				.red-list {
+					margin-bottom: 25px;
+
+					li {
+						display: block;
+						min-height: 17px;
+						background: url(../images/v.png) no-repeat left top;
+						padding-left: 25px;
+						margin-bottom: 11px;
+						line-height: 24px;
+						font-size: 16px;
+					}
+				}
+
+				.attention {
+					font-size: 21px;
+					font-style: italic;
+					margin-bottom: 20px;
+
+					&.red {
+						color: #a23b4a;
+					}
+				}
+
+				.fWid {
+					display: block;
+					margin: 30px 0;
+					width: 100%;
+					height: auto;
+				}
+
+				.toysCols {
+					.toysLeft {
+						float: left;
+						width: 373px;
+					}
+					.toysRight {
+						float: left;
+						width: 165px;
+					}
+				}
+
+				.inline-data {
+					margin-right: 17px;
+				}
+			}
+
 			&.active {
 				display: block;
 			}
 		}
 	}
 }
+

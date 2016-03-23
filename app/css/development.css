@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .companyDevelopment {
   height: 485px;
   padding: 49px 0;
@@ -10,9 +11,20 @@
 .bullseyesTabs .tabslist {
   position: relative; }
   .bullseyesTabs .tabslist li {
+    position: relative;
     display: inline-block;
     width: 170px;
     text-align: center; }
+    .bullseyesTabs .tabslist li.future:after {
+      content: "В планах";
+      position: absolute;
+      display: block;
+      top: -30px;
+      left: 50%;
+      margin-left: -15px;
+      color: #fff;
+      font-weight: 100;
+      font-size: 16px; }
     .bullseyesTabs .tabslist li:first-child {
       margin-left: -69px; }
     .bullseyesTabs .tabslist li a {

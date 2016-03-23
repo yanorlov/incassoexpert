@@ -45,29 +45,93 @@
       font-weight: bold;
       color: #a23b4a; }
 
-.borrowers .leftCol {
-  width: 250px;
-  float: left; }
-
-.borrowers .rightCol {
-  float: left; }
-
-.borrowers .tabslist li {
-  margin-left: -10px; }
-  .borrowers .tabslist li a {
-    display: inline-block;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 10px 15px;
-    border-radius: 50px;
-    background: transparent; }
-  .borrowers .tabslist li.active a {
-    background: #a23b4a; }
-    .borrowers .tabslist li.active a .pseudo {
-      color: #fff;
-      border: none; }
-
-.borrowers .tabsItems .tabsItems_item {
-  display: none; }
-  .borrowers .tabsItems .tabsItems_item.active {
-    display: block; }
+.borrowers {
+  padding-bottom: 50px; }
+  .borrowers h2 {
+    margin-bottom: 15px; }
+  .borrowers .borrowersTabs {
+    border-top: 1px solid #eeeeee;
+    padding-top: 22px; }
+  .borrowers .leftCol {
+    width: 250px;
+    float: left; }
+  .borrowers .rightCol {
+    width: 647px;
+    float: left; }
+  .borrowers .tabslist li {
+    margin-left: -10px;
+    margin-bottom: 8px; }
+    .borrowers .tabslist li a {
+      display: inline-block;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px 15px;
+      border-radius: 50px;
+      background: transparent; }
+    .borrowers .tabslist li.active a {
+      background: #a23b4a; }
+      .borrowers .tabslist li.active a .pseudo {
+        color: #fff;
+        border: none; }
+  .borrowers .tabsItems .tabsItems_item {
+    display: none; }
+    .borrowers .tabsItems .tabsItems_item h4 {
+      margin-bottom: 8px; }
+    .borrowers .tabsItems .tabsItems_item .sub {
+      font-style: italic;
+      font-size: 16px;
+      display: block;
+      margin-bottom: 20px; }
+    .borrowers .tabsItems .tabsItems_item .tabDigits {
+      margin-bottom: 20px; }
+      .borrowers .tabsItems .tabsItems_item .tabDigits .digitLeft {
+        float: left;
+        width: 216px; }
+      .borrowers .tabsItems .tabsItems_item .tabDigits .digitCenter {
+        float: left;
+        width: 231px; }
+      .borrowers .tabsItems .tabsItems_item .tabDigits .digitRight {
+        float: left; }
+      .borrowers .tabsItems .tabsItems_item .tabDigits p {
+        font-size: 17.82px;
+        margin-bottom: 4px; }
+      .borrowers .tabsItems .tabsItems_item .tabDigits .digit {
+        color: #a23b4a;
+        font-size: 23.75px; }
+        .borrowers .tabsItems .tabsItems_item .tabDigits .digit .value {
+          font-size: 41.57px;
+          font-weight: bold; }
+    .borrowers .tabsItems .tabsItems_item .tabBody p {
+      line-height: 24px;
+      margin-bottom: 8px; }
+    .borrowers .tabsItems .tabsItems_item .tabBody .red-list {
+      margin-bottom: 25px; }
+      .borrowers .tabsItems .tabsItems_item .tabBody .red-list li {
+        display: block;
+        min-height: 17px;
+        background: url(../images/v.png) no-repeat left top;
+        padding-left: 25px;
+        margin-bottom: 11px;
+        line-height: 24px;
+        font-size: 16px; }
+    .borrowers .tabsItems .tabsItems_item .tabBody .attention {
+      font-size: 21px;
+      font-style: italic;
+      margin-bottom: 20px; }
+      .borrowers .tabsItems .tabsItems_item .tabBody .attention.red {
+        color: #a23b4a; }
+    .borrowers .tabsItems .tabsItems_item .tabBody .fWid {
+      display: block;
+      margin: 30px 0;
+      width: 100%;
+      height: auto; }
+    .borrowers .tabsItems .tabsItems_item .tabBody .toysCols .toysLeft {
+      float: left;
+      width: 373px; }
+    .borrowers .tabsItems .tabsItems_item .tabBody .toysCols .toysRight {
+      float: left;
+      width: 165px; }
+    .borrowers .tabsItems .tabsItems_item .tabBody .inline-data {
+      margin-right: 17px; }
+    .borrowers .tabsItems .tabsItems_item.active {
+      display: block; }
